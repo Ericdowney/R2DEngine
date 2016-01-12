@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8972E9431C4049D300DC4FA5 /* R2DParallaxBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9421C4049D300DC4FA5 /* R2DParallaxBackground.swift */; };
+		8972E9451C404F0000DC4FA5 /* R2DScrollingPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */; };
+		8972E9471C40500200DC4FA5 /* R2DScrollingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9461C40500200DC4FA5 /* R2DScrollingNode.swift */; };
+		899C4DDB1C4051B300F77F68 /* R2DScrollingSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4DDA1C4051B300F77F68 /* R2DScrollingSpriteNode.swift */; };
+		899C4E1B1C41F2A100F77F68 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */; };
+		899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1C1C41F6D800F77F68 /* R2DButton.swift */; };
+		899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E311C4232BA00F77F68 /* R2DPlatform.swift */; };
+		899C4E361C455BED00F77F68 /* R2DSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E351C455BED00F77F68 /* R2DSpawner.swift */; };
 		89F4E17F1C404488008EDD2A /* R2DEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F4E17E1C404488008EDD2A /* R2DEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89F4E1861C404488008EDD2A /* R2DEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F4E17B1C404488008EDD2A /* R2DEngine.framework */; };
 		89F4E18B1C404488008EDD2A /* R2DEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4E18A1C404488008EDD2A /* R2DEngineTests.swift */; };
+		89F4E1961C40449D008EDD2A /* R2DBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4E1951C40449D008EDD2A /* R2DBackground.swift */; };
+		89F4E19A1C4044C9008EDD2A /* R2DEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4E1991C4044C9008EDD2A /* R2DEnums.swift */; };
+		89F4E19C1C4044D4008EDD2A /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4E19B1C4044D4008EDD2A /* CGPointExtension.swift */; };
+		89F4E19E1C4044DD008EDD2A /* CGVectorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4E19D1C4044DD008EDD2A /* CGVectorExtension.swift */; };
+		89F4E1A01C4044E4008EDD2A /* SKNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F4E19F1C4044E4008EDD2A /* SKNodeExtension.swift */; };
+		89F4E1A21C4044FD008EDD2A /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F4E1A11C4044FD008EDD2A /* SpriteKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +37,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8972E9421C4049D300DC4FA5 /* R2DParallaxBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DParallaxBackground.swift; sourceTree = "<group>"; };
+		8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingPlatform.swift; sourceTree = "<group>"; };
+		8972E9461C40500200DC4FA5 /* R2DScrollingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingNode.swift; sourceTree = "<group>"; };
+		899C4DDA1C4051B300F77F68 /* R2DScrollingSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingSpriteNode.swift; sourceTree = "<group>"; };
+		899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		899C4E1C1C41F6D800F77F68 /* R2DButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DButton.swift; sourceTree = "<group>"; };
+		899C4E311C4232BA00F77F68 /* R2DPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlatform.swift; sourceTree = "<group>"; };
+		899C4E351C455BED00F77F68 /* R2DSpawner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawner.swift; sourceTree = "<group>"; };
 		89F4E17B1C404488008EDD2A /* R2DEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = R2DEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F4E17E1C404488008EDD2A /* R2DEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = R2DEngine.h; sourceTree = "<group>"; };
 		89F4E1801C404488008EDD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89F4E1851C404488008EDD2A /* R2DEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = R2DEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F4E18A1C404488008EDD2A /* R2DEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2DEngineTests.swift; sourceTree = "<group>"; };
 		89F4E18C1C404488008EDD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89F4E1951C40449D008EDD2A /* R2DBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DBackground.swift; sourceTree = "<group>"; };
+		89F4E1991C4044C9008EDD2A /* R2DEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DEnums.swift; sourceTree = "<group>"; };
+		89F4E19B1C4044D4008EDD2A /* CGPointExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		89F4E19D1C4044DD008EDD2A /* CGVectorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVectorExtension.swift; sourceTree = "<group>"; };
+		89F4E19F1C4044E4008EDD2A /* SKNodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNodeExtension.swift; sourceTree = "<group>"; };
+		89F4E1A11C4044FD008EDD2A /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F4E1A21C4044FD008EDD2A /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +84,7 @@
 			children = (
 				89F4E17D1C404488008EDD2A /* R2DEngine */,
 				89F4E1891C404488008EDD2A /* R2DEngineTests */,
+				89F4E1A31C404500008EDD2A /* Frameworks */,
 				89F4E17C1C404488008EDD2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +103,7 @@
 			children = (
 				89F4E17E1C404488008EDD2A /* R2DEngine.h */,
 				89F4E1801C404488008EDD2A /* Info.plist */,
+				89F4E1981C4044BD008EDD2A /* Source */,
 			);
 			path = R2DEngine;
 			sourceTree = "<group>";
@@ -84,6 +115,42 @@
 				89F4E18C1C404488008EDD2A /* Info.plist */,
 			);
 			path = R2DEngineTests;
+			sourceTree = "<group>";
+		};
+		89F4E1971C4044B5008EDD2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				89F4E19F1C4044E4008EDD2A /* SKNodeExtension.swift */,
+				89F4E19B1C4044D4008EDD2A /* CGPointExtension.swift */,
+				89F4E19D1C4044DD008EDD2A /* CGVectorExtension.swift */,
+				899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		89F4E1981C4044BD008EDD2A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				89F4E1991C4044C9008EDD2A /* R2DEnums.swift */,
+				8972E9461C40500200DC4FA5 /* R2DScrollingNode.swift */,
+				899C4DDA1C4051B300F77F68 /* R2DScrollingSpriteNode.swift */,
+				89F4E1971C4044B5008EDD2A /* Extensions */,
+				89F4E1951C40449D008EDD2A /* R2DBackground.swift */,
+				8972E9421C4049D300DC4FA5 /* R2DParallaxBackground.swift */,
+				8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */,
+				899C4E311C4232BA00F77F68 /* R2DPlatform.swift */,
+				899C4E1C1C41F6D800F77F68 /* R2DButton.swift */,
+				899C4E351C455BED00F77F68 /* R2DSpawner.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		89F4E1A31C404500008EDD2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89F4E1A11C4044FD008EDD2A /* SpriteKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +263,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F4E19E1C4044DD008EDD2A /* CGVectorExtension.swift in Sources */,
+				899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */,
+				899C4E361C455BED00F77F68 /* R2DSpawner.swift in Sources */,
+				899C4DDB1C4051B300F77F68 /* R2DScrollingSpriteNode.swift in Sources */,
+				89F4E1961C40449D008EDD2A /* R2DBackground.swift in Sources */,
+				89F4E19A1C4044C9008EDD2A /* R2DEnums.swift in Sources */,
+				899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */,
+				89F4E1A01C4044E4008EDD2A /* SKNodeExtension.swift in Sources */,
+				8972E9451C404F0000DC4FA5 /* R2DScrollingPlatform.swift in Sources */,
+				89F4E19C1C4044D4008EDD2A /* CGPointExtension.swift in Sources */,
+				899C4E1B1C41F2A100F77F68 /* UIColorExtension.swift in Sources */,
+				8972E9431C4049D300DC4FA5 /* R2DParallaxBackground.swift in Sources */,
+				8972E9471C40500200DC4FA5 /* R2DScrollingNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +390,7 @@
 		89F4E1901C404488008EDD2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +401,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Downey.R2DEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		89F4E1911C404488008EDD2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,6 +461,7 @@
 				89F4E1911C404488008EDD2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89F4E1921C404488008EDD2A /* Build configuration list for PBXNativeTarget "R2DEngineTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +470,7 @@
 				89F4E1941C404488008EDD2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

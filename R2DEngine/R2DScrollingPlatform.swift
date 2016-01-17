@@ -25,7 +25,7 @@ public class R2DScrollingPlatform: SKSpriteNode, R2DScrolling {
     }
     
     public init(color: UIColor, size: CGSize, scrollSpeed: CGFloat, scrollDirection: R2DDirection) {
-        super.init(texture: nil, color: .clearColor(), size: size)
+        super.init(texture: nil, color: color, size: size)
         
         self.scrollSpeed = scrollSpeed
         self.scrollDirection = scrollDirection

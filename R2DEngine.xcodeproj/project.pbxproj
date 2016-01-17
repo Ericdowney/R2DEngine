@@ -11,6 +11,11 @@
 		893574801C4ACBD800689E43 /* R2DHudManagerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */; };
 		893574821C4B1E3B00689E43 /* R2DGameManagerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */; };
 		893574861C4B1F1E00689E43 /* R2DSpawnerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574851C4B1F1E00689E43 /* R2DSpawnerType.swift */; };
+		893574881C4B240700689E43 /* R2DGameCenterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574871C4B240700689E43 /* R2DGameCenterComponent.swift */; };
+		8935748F1C4B566D00689E43 /* R2DUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935748E1C4B566D00689E43 /* R2DUtils.swift */; };
+		893574971C4B6CC700689E43 /* R2DPlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */; };
+		893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */; };
+		8935749B1C4B70F200689E43 /* SKSpriteNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935749A1C4B70F200689E43 /* SKSpriteNodeExtension.swift */; };
 		8972E9451C404F0000DC4FA5 /* R2DScrollingPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */; };
 		899C4E1B1C41F2A100F77F68 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */; };
 		899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1C1C41F6D800F77F68 /* R2DButton.swift */; };
@@ -44,6 +49,11 @@
 		8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudManagerComponent.swift; sourceTree = "<group>"; };
 		893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DGameManagerComponent.swift; sourceTree = "<group>"; };
 		893574851C4B1F1E00689E43 /* R2DSpawnerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawnerType.swift; sourceTree = "<group>"; };
+		893574871C4B240700689E43 /* R2DGameCenterComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DGameCenterComponent.swift; sourceTree = "<group>"; };
+		8935748E1C4B566D00689E43 /* R2DUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DUtils.swift; sourceTree = "<group>"; };
+		893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlayerComponent.swift; sourceTree = "<group>"; };
+		893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DAnchorPoint.swift; sourceTree = "<group>"; };
+		8935749A1C4B70F200689E43 /* SKSpriteNodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNodeExtension.swift; sourceTree = "<group>"; };
 		8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingPlatform.swift; sourceTree = "<group>"; };
 		899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		899C4E1C1C41F6D800F77F68 /* R2DButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DButton.swift; sourceTree = "<group>"; };
@@ -94,6 +104,8 @@
 				8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */,
 				8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */,
 				893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */,
+				893574871C4B240700689E43 /* R2DGameCenterComponent.swift */,
+				893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -105,6 +117,7 @@
 				899C4E311C4232BA00F77F68 /* R2DPlatform.swift */,
 				8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */,
 				899C4E1C1C41F6D800F77F68 /* R2DButton.swift */,
+				8935748E1C4B566D00689E43 /* R2DUtils.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -114,6 +127,7 @@
 			children = (
 				89F4E1991C4044C9008EDD2A /* R2DDirection.swift */,
 				893574851C4B1F1E00689E43 /* R2DSpawnerType.swift */,
+				893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -160,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				89F4E19F1C4044E4008EDD2A /* SKNodeExtension.swift */,
+				8935749A1C4B70F200689E43 /* SKSpriteNodeExtension.swift */,
 				89F4E19B1C4044D4008EDD2A /* CGPointExtension.swift */,
 				89F4E19D1C4044DD008EDD2A /* CGVectorExtension.swift */,
 				899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */,
@@ -298,10 +313,15 @@
 			files = (
 				89F4E19E1C4044DD008EDD2A /* CGVectorExtension.swift in Sources */,
 				899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */,
+				893574971C4B6CC700689E43 /* R2DPlayerComponent.swift in Sources */,
+				8935748F1C4B566D00689E43 /* R2DUtils.swift in Sources */,
 				899C4E361C455BED00F77F68 /* R2DSpawnerComponent.swift in Sources */,
+				893574881C4B240700689E43 /* R2DGameCenterComponent.swift in Sources */,
 				893574821C4B1E3B00689E43 /* R2DGameManagerComponent.swift in Sources */,
 				89F4E1961C40449D008EDD2A /* R2DBackground.swift in Sources */,
+				893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */,
 				893574801C4ACBD800689E43 /* R2DHudManagerComponent.swift in Sources */,
+				8935749B1C4B70F200689E43 /* SKSpriteNodeExtension.swift in Sources */,
 				89F4E19A1C4044C9008EDD2A /* R2DDirection.swift in Sources */,
 				899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */,
 				89F4E1A01C4044E4008EDD2A /* SKNodeExtension.swift in Sources */,

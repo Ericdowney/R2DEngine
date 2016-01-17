@@ -14,10 +14,10 @@ public protocol R2DHudManagerProperties {
 
 public protocol R2DHudManagerComponent {
     mutating func registerComponent(component: R2DHud)
-    func initialize(scene: SKScene) -> [R2DHud]
-    func showHud(name: String) -> R2DHud
-    func hideHud(name: String) -> R2DHud
-    func getHud(name: String) -> R2DHud
+    func initialize<T: SKScene where T: R2DGameManager>(gameManager: T) -> [R2DHud]
+    func showHud(name: String) -> R2DHud?
+    func hideHud(name: String) -> R2DHud?
+    func getHud(name: String) -> R2DHud?
     func switchToHud(name: String)
 }
 
@@ -26,33 +26,33 @@ public extension R2DHudManagerComponent where Self: R2DHudManagerProperties {
         self.hudComponents.append(component)
     }
     
-    func initialize(scene: SKScene) -> [R2DHud] {
+    func initialize<T: SKScene where T: R2DGameManager>(gameManager: T) -> [R2DHud] {
         self.hudComponents.forEach {
-            $0.initialize(scene, hudManager: self)
+            $0.initialize(gameManager)
         }
         return self.hudComponents
     }
     
     func showHud(name: String) -> R2DHud? {
-        var hud: R2DHud? = self.hudComponents.filter { $0.name == name }[0]
+        var hud: R2DHud? = self.hudComponents.filter { $0.hudName == name }[0]
         hud?.show()
         return hud
     }
     
     func hideHud(name: String) -> R2DHud? {
-        var hud: R2DHud? = self.hudComponents.filter { $0.name == name }[0]
+        var hud: R2DHud? = self.hudComponents.filter { $0.hudName == name }[0]
         hud?.hide()
         return hud
     }
     
     func getHud(name: String) -> R2DHud? {
-        return self.hudComponents.filter { $0.name == name }[0]
+        return self.hudComponents.filter { $0.hudName == name }[0]
     }
     
     func switchToHud(name: String) {
         for var i in self.hudComponents {
             i.hide()
-            if i.name == name {
+            if i.hudName == name {
                 i.show()
             }
         }

@@ -10,7 +10,7 @@ import SpriteKit
 
 public typealias R2DSpawnerFunc = (seed: Int, type: R2DSpawnerType) -> [R2DScrollingComponent]
 
-public protocol R2DSpawnProperties {
+public protocol R2DSpawnProperties: class {
     var minimumSpawnTime: NSTimeInterval { get set }
     var maximumSpawnTime: NSTimeInterval { get set }
     var spawnType: R2DSpawnerType { get set }
@@ -20,14 +20,14 @@ public protocol R2DSpawnProperties {
 }
 
 public protocol R2DSpawnerComponent {
-    mutating func spawn() -> [R2DScrollingComponent]
+    func spawn() -> [R2DScrollingComponent]
     func updateSpawnNodes(currentTime: CFTimeInterval)
     func stopSpawning()
     func stop()
 }
 
 public extension R2DSpawnerComponent where Self: R2DSpawnProperties {
-    mutating func spawn() -> [R2DScrollingComponent] {
+    func spawn() -> [R2DScrollingComponent] {
         return self.spawnNodes(seed: self.seed++, type: self.spawnType)
     }
 }

@@ -9,16 +9,23 @@
 import SpriteKit
 
 public protocol R2DHudComponentProperties {
-    var name: String { get set }
+    var hudName: String { get set }
 }
+
 public protocol R2DHudComponent {
     mutating func hide()
     mutating func show()
-    func initialize(scene: SKScene, hudManager: R2DHudManager)
+    func initialize<T: SKScene where T: R2DGameManager>(gameManager: T)
 }
 
-extension R2DHudComponent {
-    public func initialize(scene: SKScene, hudManager: R2DHudManager) {}
+extension R2DHudComponent where Self: SKNode {
+    mutating public func hide() {
+        self.hidden = true
+    }
+    
+    mutating public func show() {
+        self.hidden = false
+    }
 }
 
 public typealias R2DHud = protocol<R2DHudComponentProperties,R2DHudComponent>

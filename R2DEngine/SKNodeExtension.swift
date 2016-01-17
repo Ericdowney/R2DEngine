@@ -23,13 +23,3 @@ extension SKNode {
         nodes.forEach { self.addChild($0) }
     }
 }
-
-extension SKNode: R2DHudComponent {
-    public func hide() {
-        self.hidden = true
-    }
-    
-    public func show() {
-        self.hidden = false
-    }
-}

@@ -8,17 +8,17 @@
 
 import Foundation
 
-public protocol R2DJumpProperties {
+public protocol R2DJumpProperties: class {
     var jumpCount: Int { get set }
 }
 
 public protocol R2DJumpComponent {
     func jump()
-    mutating func resetJump()
+    func resetJump()
 }
 
 public extension R2DJumpComponent where Self: R2DJumpProperties {
-    mutating func resetJump() {
+    func resetJump() {
         self.jumpCount = 0
     }
 }

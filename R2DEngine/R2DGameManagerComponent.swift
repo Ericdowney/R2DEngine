@@ -25,17 +25,17 @@ public protocol R2DGameManagerComponent: SKPhysicsContactDelegate {
 public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, Self: SKScene {
     public func resumeGame() {
         self.paused = false
-        self.hudManager.showHud(self.pauseHudName)
+        self.hudManager.switchToHud(self.gameHudName)
     }
     
     public func pauseGame() {
         self.paused = true
-        self.hudManager.showHud(self.gameHudName)
+        self.hudManager.switchToHud(self.pauseHudName)
     }
     
     public func gameOver() {
         self.paused = true
-        self.hudManager.showHud(self.gameOverHudName)
+        self.hudManager.switchToHud(self.gameOverHudName)
     }
     
     func setupPhysicsWorld() {

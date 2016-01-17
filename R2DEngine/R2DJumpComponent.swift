@@ -12,15 +12,15 @@ public protocol R2DJumpProperties: class {
     var jumpCount: Int { get set }
 }
 
-public protocol R2DJumpComponent {
+public protocol R2DDoubleJumpComponent {
     func jump()
     func resetJump()
 }
 
-public extension R2DJumpComponent where Self: R2DJumpProperties {
+public extension R2DDoubleJumpComponent where Self: R2DJumpProperties {
     func resetJump() {
         self.jumpCount = 0
     }
 }
 
-public typealias R2DJump = protocol<R2DJumpProperties, R2DJumpComponent>
+public typealias R2DDoubleJump = protocol<R2DJumpProperties, R2DDoubleJumpComponent>

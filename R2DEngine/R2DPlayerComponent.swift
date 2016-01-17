@@ -18,4 +18,12 @@ public protocol R2DPlayerProperties {
     var health: Int { get set }
 }
 
-public typealias R2DPlayer = protocol<R2DPlayerProperties>
+public protocol R2DPlayerComponent {
+    func updatePlayer(currentTime: CFTimeInterval)
+}
+
+public protocol R2DPlayerDeathDelegate {
+    func playerDied()
+}
+
+public typealias R2DPlayer = protocol<R2DPlayerProperties, R2DPlayerComponent>

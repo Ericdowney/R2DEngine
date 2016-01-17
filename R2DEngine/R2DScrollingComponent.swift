@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-public protocol R2DScrollProperties {
+public protocol R2DScrollingProperties {
     var scrollDirection: R2DDirection { get set }
     var scrollSpeed: CGFloat { get set }
 }
@@ -20,7 +20,7 @@ public protocol R2DScrollingComponent {
     func moveForeverAction() -> SKAction
 }
 
-public extension R2DScrollingComponent where Self: R2DScrollProperties {
+public extension R2DScrollingComponent where Self: R2DScrollingProperties {
     var delta: CGVector {
         return self.scrollDirection.toCGVector().r2d_multiplyBy(self.scrollSpeed)
     }
@@ -43,3 +43,5 @@ public extension R2DScrollingComponent where Self: SKNode {
         self.runAction(self.moveAction())
     }
 }
+
+public typealias R2DScrolling = protocol<R2DScrollingProperties, R2DScrollingComponent>

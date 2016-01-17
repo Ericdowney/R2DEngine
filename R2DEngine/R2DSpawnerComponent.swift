@@ -8,35 +8,31 @@
 
 import SpriteKit
 
-public enum SpawnerType: CGFloat {
-    case Tan
-    case Cos
-    case Sin
-}
-
-public typealias SpawnerFunc = (seed: Int, type: SpawnerType) -> [R2DScrollingComponent]
+public typealias R2DSpawnerFunc = (seed: Int, type: R2DSpawnerType) -> [R2DScrollingComponent]
 
 public protocol R2DSpawnProperties {
     var minimumSpawnTime: NSTimeInterval { get set }
     var maximumSpawnTime: NSTimeInterval { get set }
-    var spawnType: SpawnerType { get set }
+    var spawnType: R2DSpawnerType { get set }
     
-    var spawnNodes: SpawnerFunc { get set }
+    var spawnNodes: R2DSpawnerFunc { get set }
     var seed: Int { get set }
 }
 
-public protocol R2DSpawner {
+public protocol R2DSpawnerComponent {
     mutating func spawn() -> [R2DScrollingComponent]
     func updateSpawnNodes(currentTime: CFTimeInterval)
     func stopSpawning()
     func stop()
 }
 
-public extension R2DSpawner where Self: R2DSpawnProperties {
+public extension R2DSpawnerComponent where Self: R2DSpawnProperties {
     mutating func spawn() -> [R2DScrollingComponent] {
         return self.spawnNodes(seed: self.seed++, type: self.spawnType)
     }
 }
+
+public typealias R2DSpawner = protocol<R2DSpawnProperties, R2DSpawnerComponent>
 
 //public class R2DSpawner: SKNode {
 //    

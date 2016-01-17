@@ -8,8 +8,11 @@
 
 import SpriteKit
 
-public protocol R2DHudManager {
+public protocol R2DHudManagerProperties {
     var hudComponents: [R2DHud] { get set }
+}
+
+public protocol R2DHudManagerComponent {
     mutating func registerComponent(component: R2DHud)
     func initialize(scene: SKScene) -> [R2DHud]
     func showHud(name: String) -> R2DHud
@@ -18,7 +21,7 @@ public protocol R2DHudManager {
     func switchToHud(name: String)
 }
 
-public extension R2DHudManager {
+public extension R2DHudManagerComponent where Self: R2DHudManagerProperties {
     mutating func registerComponent(component: R2DHud) {
         self.hudComponents.append(component)
     }
@@ -55,3 +58,5 @@ public extension R2DHudManager {
         }
     }
 }
+
+public typealias R2DHudManager = protocol<R2DHudManagerProperties, R2DHudManagerComponent>

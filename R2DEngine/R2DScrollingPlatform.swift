@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-public class R2DScrollingPlatform: SKSpriteNode, R2DScrollingComponent, R2DScrollProperties {
+public class R2DScrollingPlatform: SKSpriteNode, R2DScrolling {
     
     public var scrollDirection: R2DDirection = .Left
     public var scrollSpeed: CGFloat = 0.0

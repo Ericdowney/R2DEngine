@@ -8,7 +8,6 @@
 
 import SpriteKit
 
-public typealias R2DHud = protocol<R2DHudComponentProperties,R2DHudComponent>
 public protocol R2DHudComponentProperties {
     var name: String { get set }
 }
@@ -22,13 +21,4 @@ extension R2DHudComponent {
     public func initialize(scene: SKScene, hudManager: R2DHudManager) {}
 }
 
-
-extension SKNode: R2DHudComponent {
-    public func hide() {
-        self.hidden = true
-    }
-    
-    public func show() {
-        self.hidden = false
-    }
-}
+public typealias R2DHud = protocol<R2DHudComponentProperties,R2DHudComponent>

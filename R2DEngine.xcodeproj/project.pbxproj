@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8935747E1C4ACBC300689E43 /* R2DHudComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */; };
-		893574801C4ACBD800689E43 /* R2DHudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935747F1C4ACBD800689E43 /* R2DHudManager.swift */; };
+		893574801C4ACBD800689E43 /* R2DHudManagerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */; };
+		893574821C4B1E3B00689E43 /* R2DGameManagerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */; };
+		893574861C4B1F1E00689E43 /* R2DSpawnerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574851C4B1F1E00689E43 /* R2DSpawnerType.swift */; };
 		8972E9451C404F0000DC4FA5 /* R2DScrollingPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */; };
 		899C4E1B1C41F2A100F77F68 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */; };
 		899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1C1C41F6D800F77F68 /* R2DButton.swift */; };
 		899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E311C4232BA00F77F68 /* R2DPlatform.swift */; };
-		899C4E361C455BED00F77F68 /* R2DSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E351C455BED00F77F68 /* R2DSpawner.swift */; };
+		899C4E361C455BED00F77F68 /* R2DSpawnerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */; };
 		899C4E641C473A9200F77F68 /* R2DScrollingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */; };
 		899C4E671C47403200F77F68 /* R2DJumpComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E661C47403200F77F68 /* R2DJumpComponent.swift */; };
 		89F4E17F1C404488008EDD2A /* R2DEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F4E17E1C404488008EDD2A /* R2DEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,12 +41,14 @@
 
 /* Begin PBXFileReference section */
 		8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudComponent.swift; sourceTree = "<group>"; };
-		8935747F1C4ACBD800689E43 /* R2DHudManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudManager.swift; sourceTree = "<group>"; };
+		8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudManagerComponent.swift; sourceTree = "<group>"; };
+		893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DGameManagerComponent.swift; sourceTree = "<group>"; };
+		893574851C4B1F1E00689E43 /* R2DSpawnerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawnerType.swift; sourceTree = "<group>"; };
 		8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingPlatform.swift; sourceTree = "<group>"; };
 		899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		899C4E1C1C41F6D800F77F68 /* R2DButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DButton.swift; sourceTree = "<group>"; };
 		899C4E311C4232BA00F77F68 /* R2DPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlatform.swift; sourceTree = "<group>"; };
-		899C4E351C455BED00F77F68 /* R2DSpawner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawner.swift; sourceTree = "<group>"; };
+		899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawnerComponent.swift; sourceTree = "<group>"; };
 		899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingComponent.swift; sourceTree = "<group>"; };
 		899C4E661C47403200F77F68 /* R2DJumpComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DJumpComponent.swift; sourceTree = "<group>"; };
 		89F4E17B1C404488008EDD2A /* R2DEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = R2DEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,9 +90,10 @@
 			children = (
 				899C4E661C47403200F77F68 /* R2DJumpComponent.swift */,
 				899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */,
-				899C4E351C455BED00F77F68 /* R2DSpawner.swift */,
+				899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */,
 				8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */,
-				8935747F1C4ACBD800689E43 /* R2DHudManager.swift */,
+				8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */,
+				893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				89F4E1991C4044C9008EDD2A /* R2DDirection.swift */,
+				893574851C4B1F1E00689E43 /* R2DSpawnerType.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -292,9 +298,10 @@
 			files = (
 				89F4E19E1C4044DD008EDD2A /* CGVectorExtension.swift in Sources */,
 				899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */,
-				899C4E361C455BED00F77F68 /* R2DSpawner.swift in Sources */,
+				899C4E361C455BED00F77F68 /* R2DSpawnerComponent.swift in Sources */,
+				893574821C4B1E3B00689E43 /* R2DGameManagerComponent.swift in Sources */,
 				89F4E1961C40449D008EDD2A /* R2DBackground.swift in Sources */,
-				893574801C4ACBD800689E43 /* R2DHudManager.swift in Sources */,
+				893574801C4ACBD800689E43 /* R2DHudManagerComponent.swift in Sources */,
 				89F4E19A1C4044C9008EDD2A /* R2DDirection.swift in Sources */,
 				899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */,
 				89F4E1A01C4044E4008EDD2A /* SKNodeExtension.swift in Sources */,
@@ -304,6 +311,7 @@
 				8935747E1C4ACBC300689E43 /* R2DHudComponent.swift in Sources */,
 				899C4E671C47403200F77F68 /* R2DJumpComponent.swift in Sources */,
 				899C4E1B1C41F2A100F77F68 /* UIColorExtension.swift in Sources */,
+				893574861C4B1F1E00689E43 /* R2DSpawnerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

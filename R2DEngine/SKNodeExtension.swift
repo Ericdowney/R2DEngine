@@ -8,12 +8,8 @@
 
 import SpriteKit
 
-public protocol R2DAddChildren {
-    func r2d_addScrollChildren(nodes: R2DScrollingComponent...)
-    func r2d_addScrollChildren(nodes: [R2DScrollingComponent])
-}
 
-extension SKNode: R2DAddChildren {
+extension SKNode {
     public convenience init(r2d_name: String) {
         self.init()
         self.name = r2d_name
@@ -26,20 +22,14 @@ extension SKNode: R2DAddChildren {
     public func r2d_addChildren(nodes: [SKNode]) {
         nodes.forEach { self.addChild($0) }
     }
-    
-    public func r2d_addScrollChildren(nodes: [R2DScrollingComponent]) {
-        nodes.forEach {
-            if let node = $0 as? SKNode {
-                self.addChild(node)
-            }
-        }
+}
+
+extension SKNode: R2DHudComponent {
+    public func hide() {
+        self.hidden = true
     }
     
-    public func r2d_addScrollChildren(nodes: R2DScrollingComponent...) {
-        nodes.forEach {
-            if let node = $0 as? SKNode {
-                self.addChild(node)
-            }
-        }
+    public func show() {
+        self.hidden = false
     }
 }

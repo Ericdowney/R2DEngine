@@ -8,20 +8,27 @@
 
 import SpriteKit
 
-public class R2DScrollingPlatform: R2DScrollingSpriteNode {
+public class R2DScrollingPlatform: SKSpriteNode, R2DScrollingComponent, R2DScrollProperties {
+    
+    public var scrollDirection: R2DDirection = .Left
+    public var scrollSpeed: CGFloat = 0.0
     
     public init(imageNamed: String, scrollSpeed: CGFloat, scrollDirection: R2DDirection) {
         let texture = SKTexture(imageNamed: imageNamed)
-        super.init(texture: texture, scrollSpeed: scrollSpeed, scrollDirection: scrollDirection)
+        super.init(texture: texture, color: .clearColor(), size: texture.size())
         
+        self.scrollSpeed = scrollSpeed
+        self.scrollDirection = scrollDirection
         self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 0, y: 0, width: texture.size().width, height: texture.size().height))
         self.physicsBody?.dynamic = false
     }
     
-    public override init(color: UIColor, size: CGSize, scrollSpeed: CGFloat, scrollDirection: R2DDirection) {
-        super.init(color: color, size: size, scrollSpeed: scrollSpeed, scrollDirection: scrollDirection)
+    public init(color: UIColor, size: CGSize, scrollSpeed: CGFloat, scrollDirection: R2DDirection) {
+        super.init(texture: nil, color: .clearColor(), size: size)
         
+        self.scrollSpeed = scrollSpeed
+        self.scrollDirection = scrollDirection
         self.anchorPoint = CGPoint(x: 0.0, y: 0.0)
         self.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         self.physicsBody?.dynamic = false

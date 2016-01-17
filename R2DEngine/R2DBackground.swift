@@ -8,7 +8,20 @@
 
 import SpriteKit
 
-public class R2DBackground: R2DScrollingNode {
+public class R2DBackground: SKNode, R2DScrollingComponent, R2DScrollProperties {
+    
+    public var scrollDirection: R2DDirection = .Left
+    public var scrollSpeed: CGFloat = 0.0
+    
+    public init(scrollSpeed: CGFloat, scrollDirection: R2DDirection) {
+        self.scrollSpeed = scrollSpeed
+        self.scrollDirection = scrollDirection
+        super.init()
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     public func addSprite(sprite: SKSpriteNode) {
         self.addChild(sprite)

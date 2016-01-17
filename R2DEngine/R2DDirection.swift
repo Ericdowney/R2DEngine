@@ -11,7 +11,7 @@ import Foundation
 public enum R2DDirection {
     case Left,Right,Up,Down
     
-    public func toCGVector() -> CGVector {
+    public var vector: CGVector {
         switch self {
         case .Left: return CGVector(dx: -1.0, dy: 0.0)
         case .Right: return CGVector(dx: 1.0, dy: 0.0)

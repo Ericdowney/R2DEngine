@@ -75,4 +75,10 @@ public extension UIColor {
             return self;
         }
     }
+    
+    public var r2dInverseColor: UIColor {
+        let components = CGColorGetComponents(self.CGColor)
+        
+        return UIColor(red: 1.0 - components[0], green: 1.0 - components[1], blue: 1.0 - components[2], alpha: components[3])
+    }
 }

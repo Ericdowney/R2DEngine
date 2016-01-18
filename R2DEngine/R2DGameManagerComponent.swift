@@ -20,6 +20,7 @@ public protocol R2DGameManagerComponent: SKPhysicsContactDelegate {
     func pauseGame()
     func gameOver()
     func setupPhysicsWorld()
+    func reset()
 }
 
 public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, Self: SKScene {

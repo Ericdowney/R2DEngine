@@ -20,6 +20,7 @@ public protocol R2DPlayerProperties {
 
 public protocol R2DPlayerComponent {
     func updatePlayer(currentTime: CFTimeInterval)
+    func resetPlayer()
 }
 
 public protocol R2DPlayerDeathDelegate {

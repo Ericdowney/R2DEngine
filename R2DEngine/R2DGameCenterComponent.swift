@@ -15,6 +15,7 @@ public protocol R2DGameCenterProperties: class {
 
 public protocol R2DGameCenterComponent: GKGameCenterControllerDelegate {
     func authenticateLocalPlayer(viewController: UIViewController)
+    func displayLeaderboard(viewController: UIViewController)
 }
 
 public extension R2DGameCenterComponent where Self: R2DGameCenterProperties {
@@ -39,14 +40,20 @@ public extension R2DGameCenterComponent where Self: R2DGameCenterProperties {
             
             // Get the default leaderboard ID
             localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler { leaderboardIdentifer, error in
-                if error != nil {
-                    print(error)
-                }
-                else {
+                if error == nil {
                     self.r2d_gameCenterDefaultLeaderBoard = leaderboardIdentifer
                 }
             }
         }
+    }
+    
+    func displayLeaderboard(viewController: UIViewController) {
+        let gcViewCtrl = GKGameCenterViewController()
+        
+        gcViewCtrl.viewState = .Leaderboards
+        gcViewCtrl.leaderboardIdentifier = self.r2d_gameCenterDefaultLeaderBoard
+        
+        viewController.presentViewController(gcViewCtrl, animated: true, completion: nil)
     }
 }
 

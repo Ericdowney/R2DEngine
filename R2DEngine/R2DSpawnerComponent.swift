@@ -87,7 +87,6 @@ public typealias R2DSpawner = protocol<R2DSpawnProperties, R2DSpawnerComponent>
 //        self.runAction( spawnAction )
 //    }
 //
-//    // TODO: Called in update function in scene
 //    public func updateSpawnedNodes() {
 //        let toBeRemoved = self.children.filter { node in
 //            guard let scrollingSprite = node as? R2DScrollingSpriteNode else {

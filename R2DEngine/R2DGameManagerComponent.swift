@@ -45,6 +45,7 @@ public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, S
         self.physicsWorld.contactDelegate = self
     }
     
+    // TODO: Find out why this is not working
     func didBeginContact(contact: SKPhysicsContact) {
         if let gameComponent = contact.bodyA.node as? R2DGameComponent {
             gameComponent.updateCollision(contact, gameManager: self)

@@ -1,5 +1,5 @@
 //
-//  R2DPlatform.swift
+//  R2DScrollingPlatform.swift
 //  R2DEngine
 //
 //  Created by Downey, Eric on 1/8/16.

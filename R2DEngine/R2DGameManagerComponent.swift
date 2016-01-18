@@ -24,17 +24,17 @@ public protocol R2DGameManagerComponent: SKPhysicsContactDelegate {
 }
 
 public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, Self: SKScene {
-    public func resumeGame() {
+    func resumeGame() {
         self.paused = false
         self.hudManager.switchToHud(self.gameHudName)
     }
     
-    public func pauseGame() {
+    func pauseGame() {
         self.paused = true
         self.hudManager.switchToHud(self.pauseHudName)
     }
     
-    public func gameOver() {
+    func gameOver() {
         self.paused = true
         self.hudManager.switchToHud(self.gameOverHudName)
     }
@@ -42,6 +42,15 @@ public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, S
     func setupPhysicsWorld() {
         self.physicsWorld.gravity = CGVectorMake(0,-9.8)
         self.physicsWorld.contactDelegate = self
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+        if let gameComponent = contact.bodyA.node as? R2DGameComponent {
+            gameComponent.updateCollision(contact, gameManager: self)
+        }
+        if let gameComponent = contact.bodyB.node as? R2DGameComponent {
+            gameComponent.updateCollision(contact, gameManager: self)
+        }
     }
 }
 

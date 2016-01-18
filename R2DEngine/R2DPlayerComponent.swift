@@ -13,7 +13,6 @@ public protocol R2DInventoryItem {
 }
 
 public protocol R2DPlayerProperties {
-    var score: Int { get set }
     var inventory: [R2DInventoryItem] { get set }
     var health: Int { get set }
 }

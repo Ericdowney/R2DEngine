@@ -13,6 +13,7 @@ public protocol R2DGameManagerProperties {
     var gameHudName: String { get set }
     var pauseHudName: String { get set }
     var gameOverHudName: String { get set }
+    var score: Int { get set }
 }
 
 public protocol R2DGameManagerComponent: SKPhysicsContactDelegate {

@@ -9,7 +9,7 @@
 import Foundation
 
 public extension CGPoint {
-    public func addVector(vector: CGVector) -> CGPoint {
+    public func r2d_addVector(vector: CGVector) -> CGPoint {
         return CGPoint(x: self.x + vector.dx, y: self.y + vector.dy)
     }
 }

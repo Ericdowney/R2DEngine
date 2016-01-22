@@ -9,7 +9,8 @@
 import SpriteKit
 
 public protocol R2DGameManagerProperties {
-    var hudManager: R2DHudManager { get }
+    typealias Hud: R2DHudManager
+    var hudManager: Hud { get }
     var gameHudName: String { get set }
     var pauseHudName: String { get set }
     var gameOverHudName: String { get set }

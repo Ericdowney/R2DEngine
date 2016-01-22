@@ -21,12 +21,12 @@ public protocol R2DScrollingComponent {
 }
 
 public extension R2DScrollingComponent where Self: R2DScrollingProperties {
-    var delta: CGVector {
+    var scrollDelta: CGVector {
         return self.scrollDirection.vector.r2d_multiplyBy(self.scrollSpeed)
     }
     
     func moveAction() -> SKAction {
-        return SKAction.moveBy(self.delta, duration: 1.0/60.0)
+        return SKAction.moveBy(self.scrollDelta, duration: 1.0/60.0)
     }
     
     func moveForeverAction() -> SKAction {

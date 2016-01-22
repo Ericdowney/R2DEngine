@@ -8,7 +8,6 @@
 
 import SpriteKit
 
-
 extension SKNode {
     public convenience init(r2d_name: String) {
         self.init()

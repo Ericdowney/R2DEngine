@@ -16,14 +16,23 @@
 		893574971C4B6CC700689E43 /* R2DPlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */; };
 		893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */; };
 		8935749B1C4B70F200689E43 /* SKSpriteNodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935749A1C4B70F200689E43 /* SKSpriteNodeExtension.swift */; };
+		89720DB61C52BA9D00307CD0 /* CGPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB51C52BA9D00307CD0 /* CGPointExtensionTests.swift */; };
+		89720DB81C52BC5F00307CD0 /* CGVectorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB71C52BC5F00307CD0 /* CGVectorExtensionTests.swift */; };
+		89720DBA1C52BD5800307CD0 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB91C52BD5800307CD0 /* UIColorExtensionTests.swift */; };
 		8972E9451C404F0000DC4FA5 /* R2DScrollingPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */; };
 		898AE5991C514D8A00AD0A51 /* R2DDashComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898AE5981C514D8A00AD0A51 /* R2DDashComponent.swift */; };
+		898AE59E1C529F4800AD0A51 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59A1C529F3900AD0A51 /* Nimble.framework */; };
+		898AE59F1C529F4B00AD0A51 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59B1C529F3900AD0A51 /* Quick.framework */; };
 		899C4E1B1C41F2A100F77F68 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */; };
 		899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1C1C41F6D800F77F68 /* R2DButton.swift */; };
 		899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E311C4232BA00F77F68 /* R2DPlatform.swift */; };
 		899C4E361C455BED00F77F68 /* R2DSpawnerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */; };
 		899C4E641C473A9200F77F68 /* R2DScrollingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */; };
 		899C4E671C47403200F77F68 /* R2DJumpComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E661C47403200F77F68 /* R2DJumpComponent.swift */; };
+		89B906061C529FF100138743 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59A1C529F3900AD0A51 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89B906071C529FF100138743 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59B1C529F3900AD0A51 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		89B906091C52A1F700138743 /* SKNodeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B906081C52A1F700138743 /* SKNodeExtensionTests.swift */; };
+		89B9060B1C52A37100138743 /* SKSpriteNodeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9060A1C52A37100138743 /* SKSpriteNodeExtensionTests.swift */; };
 		89D9AA471C4C77E100CCB90B /* R2DDisappearComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */; };
 		89D9AA5C1C4C8A5100CCB90B /* R2DGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */; };
 		89D9AA5E1C4D55CA00CCB90B /* R2DMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */; };
@@ -49,6 +58,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		89B906051C529FD900138743 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				89B906061C529FF100138743 /* Nimble.framework in Embed Frameworks */,
+				89B906071C529FF100138743 /* Quick.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudComponent.swift; sourceTree = "<group>"; };
 		8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudManagerComponent.swift; sourceTree = "<group>"; };
@@ -59,14 +83,21 @@
 		893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlayerComponent.swift; sourceTree = "<group>"; };
 		893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DAnchorPoint.swift; sourceTree = "<group>"; };
 		8935749A1C4B70F200689E43 /* SKSpriteNodeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNodeExtension.swift; sourceTree = "<group>"; };
+		89720DB51C52BA9D00307CD0 /* CGPointExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensionTests.swift; sourceTree = "<group>"; };
+		89720DB71C52BC5F00307CD0 /* CGVectorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVectorExtensionTests.swift; sourceTree = "<group>"; };
+		89720DB91C52BD5800307CD0 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
 		8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingPlatform.swift; sourceTree = "<group>"; };
 		898AE5981C514D8A00AD0A51 /* R2DDashComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DDashComponent.swift; sourceTree = "<group>"; };
+		898AE59A1C529F3900AD0A51 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		898AE59B1C529F3900AD0A51 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		899C4E1A1C41F2A100F77F68 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		899C4E1C1C41F6D800F77F68 /* R2DButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DButton.swift; sourceTree = "<group>"; };
 		899C4E311C4232BA00F77F68 /* R2DPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlatform.swift; sourceTree = "<group>"; };
 		899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawnerComponent.swift; sourceTree = "<group>"; };
 		899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingComponent.swift; sourceTree = "<group>"; };
 		899C4E661C47403200F77F68 /* R2DJumpComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DJumpComponent.swift; sourceTree = "<group>"; };
+		89B906081C52A1F700138743 /* SKNodeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNodeExtensionTests.swift; sourceTree = "<group>"; };
+		89B9060A1C52A37100138743 /* SKSpriteNodeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNodeExtensionTests.swift; sourceTree = "<group>"; };
 		89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DDisappearComponent.swift; sourceTree = "<group>"; };
 		89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DGameComponent.swift; sourceTree = "<group>"; };
 		89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DMessenger.swift; sourceTree = "<group>"; };
@@ -99,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F4E1861C404488008EDD2A /* R2DEngine.framework in Frameworks */,
+				898AE59E1C529F4800AD0A51 /* Nimble.framework in Frameworks */,
+				898AE59F1C529F4B00AD0A51 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +213,11 @@
 			isa = PBXGroup;
 			children = (
 				89F4E18A1C404488008EDD2A /* R2DEngineTests.swift */,
+				89B906081C52A1F700138743 /* SKNodeExtensionTests.swift */,
+				89B9060A1C52A37100138743 /* SKSpriteNodeExtensionTests.swift */,
+				89720DB51C52BA9D00307CD0 /* CGPointExtensionTests.swift */,
+				89720DB71C52BC5F00307CD0 /* CGVectorExtensionTests.swift */,
+				89720DB91C52BD5800307CD0 /* UIColorExtensionTests.swift */,
 				89F4E18C1C404488008EDD2A /* Info.plist */,
 			);
 			path = R2DEngineTests;
@@ -211,6 +249,8 @@
 		89F4E1A31C404500008EDD2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				898AE59A1C529F3900AD0A51 /* Nimble.framework */,
+				898AE59B1C529F3900AD0A51 /* Quick.framework */,
 				89F4E1A11C4044FD008EDD2A /* SpriteKit.framework */,
 			);
 			name = Frameworks;
@@ -255,6 +295,7 @@
 				89F4E1811C404488008EDD2A /* Sources */,
 				89F4E1821C404488008EDD2A /* Frameworks */,
 				89F4E1831C404488008EDD2A /* Resources */,
+				89B906051C529FD900138743 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -360,6 +401,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F4E18B1C404488008EDD2A /* R2DEngineTests.swift in Sources */,
+				89720DBA1C52BD5800307CD0 /* UIColorExtensionTests.swift in Sources */,
+				89B9060B1C52A37100138743 /* SKSpriteNodeExtensionTests.swift in Sources */,
+				89720DB61C52BA9D00307CD0 /* CGPointExtensionTests.swift in Sources */,
+				89B906091C52A1F700138743 /* SKNodeExtensionTests.swift in Sources */,
+				89720DB81C52BC5F00307CD0 /* CGVectorExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +517,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = R2DEngine/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -489,6 +539,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = R2DEngine/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -501,6 +555,10 @@
 		89F4E1931C404488008EDD2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = R2DEngineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Downey.R2DEngineTests;
@@ -511,6 +569,10 @@
 		89F4E1941C404488008EDD2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = R2DEngineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Downey.R2DEngineTests;

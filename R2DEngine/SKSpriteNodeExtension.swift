@@ -13,27 +13,23 @@ public extension SKSpriteNode {
         self.anchorPoint = anchor.value
     }
     
+    // MARK: - X
+    
     public var r2d_leftX: CGFloat {
-        let width = self.size.width
-        let anchorX = self.anchorPoint.x
-        if anchorX == 0 {
-            return self.position.x
-        }
-        if anchorX == 1 {
-            return self.position.x + width
-        }
-        return self.position.x - (width * anchorX)
+        return self.position.x - (self.size.width * self.anchorPoint.x)
     }
     
     public var r2d_rightX: CGFloat {
-        let width = self.size.width
-        let anchorX = self.anchorPoint.x
-        if anchorX == 0 {
-            return self.position.x + width
-        }
-        if anchorX == 1 {
-            return self.position.x
-        }
-        return self.position.x + (width * anchorX)
+        return self.position.x + self.size.width - (self.size.width * self.anchorPoint.x)
+    }
+    
+    // MARK: - Y
+    
+    public var r2d_topY: CGFloat {
+        return self.position.y + self.size.height - (self.size.height * self.anchorPoint.y)
+    }
+    
+    public var r2d_bottomY: CGFloat {
+        return self.position.y - (self.size.height * self.anchorPoint.y)
     }
 }

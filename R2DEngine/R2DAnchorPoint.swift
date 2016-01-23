@@ -23,7 +23,7 @@ public enum R2DAnchorPoint {
         switch self {
         case Center: return CGPoint(x: 0.5, y: 0.5)
         case Left: return CGPoint(x: 0.0, y: 0.5)
-        case Right: return CGPoint(x: 0.5, y: 0.0)
+        case Right: return CGPoint(x: 1.0, y: 0.5)
         case Top: return CGPoint(x: 0.5, y: 1.0)
         case Bottom: return CGPoint(x: 0.5, y: 0.0)
         case BottomLeft: return CGPoint(x: 0.0, y: 0.0)

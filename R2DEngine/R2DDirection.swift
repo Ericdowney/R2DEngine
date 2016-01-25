@@ -19,4 +19,18 @@ public enum R2DDirection {
         case .Down: return CGVector(dx: 0.0, dy: -1.0)
         }
     }
+    
+    public static var randomHorizontal: R2DDirection {
+        if arc4random_uniform(2) == 0 {
+            return .Left
+        }
+        return .Right
+    }
+    
+    public static var randomVertical: R2DDirection {
+        if arc4random_uniform(2) == 0 {
+            return .Up
+        }
+        return .Down
+    }
 }

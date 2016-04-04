@@ -16,14 +16,16 @@
 		893574971C4B6CC700689E43 /* R2DPlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */; };
 		893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */; };
 		8935749B1C4B70F200689E43 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */; };
-		89720DB61C52BA9D00307CD0 /* CGPointExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB51C52BA9D00307CD0 /* CGPointExtensionTests.swift */; };
-		89720DB81C52BC5F00307CD0 /* CGVectorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB71C52BC5F00307CD0 /* CGVectorExtensionTests.swift */; };
-		89720DBA1C52BD5800307CD0 /* UIColorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB91C52BD5800307CD0 /* UIColorExtensionTests.swift */; };
+		89720DB61C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB51C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift */; };
+		89720DB81C52BC5F00307CD0 /* CGVector+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB71C52BC5F00307CD0 /* CGVector+ExtensionTests.swift */; };
+		89720DBA1C52BD5800307CD0 /* UIColor+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB91C52BD5800307CD0 /* UIColor+ExtensionTests.swift */; };
 		8972E9451C404F0000DC4FA5 /* R2DScrollingPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */; };
 		898AE5991C514D8A00AD0A51 /* R2DDashComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898AE5981C514D8A00AD0A51 /* R2DDashComponent.swift */; };
 		898AE59E1C529F4800AD0A51 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59A1C529F3900AD0A51 /* Nimble.framework */; };
 		898AE59F1C529F4B00AD0A51 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59B1C529F3900AD0A51 /* Quick.framework */; };
 		89948A7E1CB2BDDD00733069 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89948A7D1CB2BDDD00733069 /* Int+Extension.swift */; };
+		89948A851CB2CC4800733069 /* Int+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89948A841CB2CC4800733069 /* Int+ExtensionTests.swift */; };
+		89948A871CB2CF2400733069 /* R2DAttackComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89948A861CB2CF2400733069 /* R2DAttackComponentTests.swift */; };
 		899C4E1B1C41F2A100F77F68 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1A1C41F2A100F77F68 /* UIColor+Extension.swift */; };
 		899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1C1C41F6D800F77F68 /* R2DButton.swift */; };
 		899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E311C4232BA00F77F68 /* R2DPlatform.swift */; };
@@ -32,8 +34,8 @@
 		899C4E671C47403200F77F68 /* R2DJumpComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E661C47403200F77F68 /* R2DJumpComponent.swift */; };
 		89B906061C529FF100138743 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59A1C529F3900AD0A51 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89B906071C529FF100138743 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59B1C529F3900AD0A51 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		89B906091C52A1F700138743 /* SKNodeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B906081C52A1F700138743 /* SKNodeExtensionTests.swift */; };
-		89B9060B1C52A37100138743 /* SKSpriteNodeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9060A1C52A37100138743 /* SKSpriteNodeExtensionTests.swift */; };
+		89B906091C52A1F700138743 /* SKNode+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B906081C52A1F700138743 /* SKNode+ExtensionTests.swift */; };
+		89B9060B1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9060A1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift */; };
 		89D9AA471C4C77E100CCB90B /* R2DDisappearComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */; };
 		89D9AA5C1C4C8A5100CCB90B /* R2DGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */; };
 		89D9AA5E1C4D55CA00CCB90B /* R2DMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */; };
@@ -84,22 +86,24 @@
 		893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlayerComponent.swift; sourceTree = "<group>"; };
 		893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DAnchorPoint.swift; sourceTree = "<group>"; };
 		8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
-		89720DB51C52BA9D00307CD0 /* CGPointExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensionTests.swift; sourceTree = "<group>"; };
-		89720DB71C52BC5F00307CD0 /* CGVectorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVectorExtensionTests.swift; sourceTree = "<group>"; };
-		89720DB91C52BD5800307CD0 /* UIColorExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensionTests.swift; sourceTree = "<group>"; };
+		89720DB51C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+ExtensionTests.swift"; sourceTree = "<group>"; };
+		89720DB71C52BC5F00307CD0 /* CGVector+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+ExtensionTests.swift"; sourceTree = "<group>"; };
+		89720DB91C52BD5800307CD0 /* UIColor+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ExtensionTests.swift"; sourceTree = "<group>"; };
 		8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingPlatform.swift; sourceTree = "<group>"; };
 		898AE5981C514D8A00AD0A51 /* R2DDashComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DDashComponent.swift; sourceTree = "<group>"; };
 		898AE59A1C529F3900AD0A51 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		898AE59B1C529F3900AD0A51 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		89948A7D1CB2BDDD00733069 /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		89948A841CB2CC4800733069 /* Int+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ExtensionTests.swift"; sourceTree = "<group>"; };
+		89948A861CB2CF2400733069 /* R2DAttackComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DAttackComponentTests.swift; path = R2DEngineTests/R2DAttackComponentTests.swift; sourceTree = SOURCE_ROOT; };
 		899C4E1A1C41F2A100F77F68 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		899C4E1C1C41F6D800F77F68 /* R2DButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DButton.swift; sourceTree = "<group>"; };
 		899C4E311C4232BA00F77F68 /* R2DPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlatform.swift; sourceTree = "<group>"; };
 		899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawnerComponent.swift; sourceTree = "<group>"; };
 		899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingComponent.swift; sourceTree = "<group>"; };
 		899C4E661C47403200F77F68 /* R2DJumpComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DJumpComponent.swift; sourceTree = "<group>"; };
-		89B906081C52A1F700138743 /* SKNodeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNodeExtensionTests.swift; sourceTree = "<group>"; };
-		89B9060A1C52A37100138743 /* SKSpriteNodeExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNodeExtensionTests.swift; sourceTree = "<group>"; };
+		89B906081C52A1F700138743 /* SKNode+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKNode+ExtensionTests.swift"; sourceTree = "<group>"; };
+		89B9060A1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+ExtensionTests.swift"; sourceTree = "<group>"; };
 		89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DDisappearComponent.swift; sourceTree = "<group>"; };
 		89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DGameComponent.swift; sourceTree = "<group>"; };
 		89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DMessenger.swift; sourceTree = "<group>"; };
@@ -143,51 +147,79 @@
 		8935747A1C4ACA5000689E43 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */,
-				899C4E661C47403200F77F68 /* R2DJumpComponent.swift */,
+				89D9AA6F1C4EB12500CCB90B /* R2DAttackComponent.swift */,
 				898AE5981C514D8A00AD0A51 /* R2DDashComponent.swift */,
-				899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */,
-				899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */,
+				89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */,
+				893574871C4B240700689E43 /* R2DGameCenterComponent.swift */,
+				89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */,
+				893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */,
 				8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */,
 				8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */,
-				893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */,
-				893574871C4B240700689E43 /* R2DGameCenterComponent.swift */,
-				893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */,
-				89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */,
+				899C4E661C47403200F77F68 /* R2DJumpComponent.swift */,
 				89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */,
-				89D9AA6F1C4EB12500CCB90B /* R2DAttackComponent.swift */,
+				893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */,
+				899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */,
+				899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */,
 			);
-			name = Protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8935747B1C4ACA6400689E43 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
 				89F4E1951C40449D008EDD2A /* R2DBackground.swift */,
+				899C4E1C1C41F6D800F77F68 /* R2DButton.swift */,
 				899C4E311C4232BA00F77F68 /* R2DPlatform.swift */,
 				8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */,
-				899C4E1C1C41F6D800F77F68 /* R2DButton.swift */,
 				8935748E1C4B566D00689E43 /* R2DUtils.swift */,
 			);
-			name = Objects;
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		8935747C1C4ACA8500689E43 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */,
 				89F4E1991C4044C9008EDD2A /* R2DDirection.swift */,
 				893574851C4B1F1E00689E43 /* R2DSpawnerType.swift */,
-				893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */,
 			);
-			name = Enums;
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		89948A811CB2CBFC00733069 /* Extension Tests */ = {
+			isa = PBXGroup;
+			children = (
+				89720DB51C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift */,
+				89720DB71C52BC5F00307CD0 /* CGVector+ExtensionTests.swift */,
+				89948A841CB2CC4800733069 /* Int+ExtensionTests.swift */,
+				89B906081C52A1F700138743 /* SKNode+ExtensionTests.swift */,
+				89B9060A1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift */,
+				89720DB91C52BD5800307CD0 /* UIColor+ExtensionTests.swift */,
+			);
+			path = "Extension Tests";
+			sourceTree = "<group>";
+		};
+		89948A821CB2CC0100733069 /* Protocol Tests */ = {
+			isa = PBXGroup;
+			children = (
+				89948A861CB2CF2400733069 /* R2DAttackComponentTests.swift */,
+			);
+			path = "Protocol Tests";
+			sourceTree = "<group>";
+		};
+		89948A831CB2CC1900733069 /* Object Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Object Tests";
 			sourceTree = "<group>";
 		};
 		89F4E1711C404488008EDD2A = {
 			isa = PBXGroup;
 			children = (
+				89F4E1A31C404500008EDD2A /* Frameworks */,
 				89F4E17D1C404488008EDD2A /* R2DEngine */,
 				89F4E1891C404488008EDD2A /* R2DEngineTests */,
-				89F4E1A31C404500008EDD2A /* Frameworks */,
 				89F4E17C1C404488008EDD2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -204,9 +236,9 @@
 		89F4E17D1C404488008EDD2A /* R2DEngine */ = {
 			isa = PBXGroup;
 			children = (
-				89F4E17E1C404488008EDD2A /* R2DEngine.h */,
-				89F4E1801C404488008EDD2A /* Info.plist */,
 				89F4E1981C4044BD008EDD2A /* Source */,
+				89F4E1801C404488008EDD2A /* Info.plist */,
+				89F4E17E1C404488008EDD2A /* R2DEngine.h */,
 			);
 			path = R2DEngine;
 			sourceTree = "<group>";
@@ -214,13 +246,11 @@
 		89F4E1891C404488008EDD2A /* R2DEngineTests */ = {
 			isa = PBXGroup;
 			children = (
-				89F4E18A1C404488008EDD2A /* R2DEngineTests.swift */,
-				89B906081C52A1F700138743 /* SKNodeExtensionTests.swift */,
-				89B9060A1C52A37100138743 /* SKSpriteNodeExtensionTests.swift */,
-				89720DB51C52BA9D00307CD0 /* CGPointExtensionTests.swift */,
-				89720DB71C52BC5F00307CD0 /* CGVectorExtensionTests.swift */,
-				89720DB91C52BD5800307CD0 /* UIColorExtensionTests.swift */,
+				89948A811CB2CBFC00733069 /* Extension Tests */,
+				89948A831CB2CC1900733069 /* Object Tests */,
+				89948A821CB2CC0100733069 /* Protocol Tests */,
 				89F4E18C1C404488008EDD2A /* Info.plist */,
+				89F4E18A1C404488008EDD2A /* R2DEngineTests.swift */,
 			);
 			path = R2DEngineTests;
 			sourceTree = "<group>";
@@ -228,25 +258,25 @@
 		89F4E1971C4044B5008EDD2A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				89F4E19B1C4044D4008EDD2A /* CGPoint+Extension.swift */,
+				89F4E19D1C4044DD008EDD2A /* CGVector+Extension.swift */,
 				89948A7D1CB2BDDD00733069 /* Int+Extension.swift */,
 				89F4E19F1C4044E4008EDD2A /* SKNode+Extension.swift */,
 				8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */,
-				89F4E19B1C4044D4008EDD2A /* CGPoint+Extension.swift */,
-				89F4E19D1C4044DD008EDD2A /* CGVector+Extension.swift */,
 				899C4E1A1C41F2A100F77F68 /* UIColor+Extension.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		89F4E1981C4044BD008EDD2A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				89F4E1971C4044B5008EDD2A /* Extensions */,
 				8935747C1C4ACA8500689E43 /* Enums */,
-				8935747A1C4ACA5000689E43 /* Protocols */,
+				89F4E1971C4044B5008EDD2A /* Extensions */,
 				8935747B1C4ACA6400689E43 /* Objects */,
+				8935747A1C4ACA5000689E43 /* Protocols */,
 			);
-			name = Source;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		89F4E1A31C404500008EDD2A /* Frameworks */ = {
@@ -405,11 +435,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				89F4E18B1C404488008EDD2A /* R2DEngineTests.swift in Sources */,
-				89720DBA1C52BD5800307CD0 /* UIColorExtensionTests.swift in Sources */,
-				89B9060B1C52A37100138743 /* SKSpriteNodeExtensionTests.swift in Sources */,
-				89720DB61C52BA9D00307CD0 /* CGPointExtensionTests.swift in Sources */,
-				89B906091C52A1F700138743 /* SKNodeExtensionTests.swift in Sources */,
-				89720DB81C52BC5F00307CD0 /* CGVectorExtensionTests.swift in Sources */,
+				89720DBA1C52BD5800307CD0 /* UIColor+ExtensionTests.swift in Sources */,
+				89948A851CB2CC4800733069 /* Int+ExtensionTests.swift in Sources */,
+				89B9060B1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift in Sources */,
+				89720DB61C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift in Sources */,
+				89B906091C52A1F700138743 /* SKNode+ExtensionTests.swift in Sources */,
+				89948A871CB2CF2400733069 /* R2DAttackComponentTests.swift in Sources */,
+				89720DB81C52BC5F00307CD0 /* CGVector+ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

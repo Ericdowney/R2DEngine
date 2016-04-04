@@ -40,7 +40,7 @@ class SKNodeExtensionTests: QuickSpec {
                 let c1 = SKNode(r2d_name: "node1")
                 let c2 = SKNode(r2d_name: "node2")
                 
-                subject.r2d_addChildren(c1, c2)
+                subject.r2d_addChildren([c1, c2])
                 
                 expect(subject.children).to(contain(c1, c2))
             }

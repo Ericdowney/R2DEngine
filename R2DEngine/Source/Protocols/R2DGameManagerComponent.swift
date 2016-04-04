@@ -59,16 +59,6 @@ public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, S
             gameComponent.updateCollision(contact, gameManager: self)
         }
     }
-    
-    // TODO: Find out why this is not working
-//    func didBeginContact(contact: SKPhysicsContact) {
-//        if let gameComponent = contact.bodyA.node as? R2DGameComponent {
-//            gameComponent.updateCollision(contact, gameManager: self)
-//        }
-//        if let gameComponent = contact.bodyB.node as? R2DGameComponent {
-//            gameComponent.updateCollision(contact, gameManager: self)
-//        }
-//    }
 }
 
 public typealias R2DGameManager = protocol<R2DGameManagerProperties, R2DGameManagerComponent>

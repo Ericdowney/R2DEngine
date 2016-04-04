@@ -6,7 +6,6 @@
 //  Copyright © 2016 Eric Downey. All rights reserved.
 //
 
-import XCTest
 import SpriteKit
 @testable import R2DEngine
 
@@ -25,6 +24,14 @@ class UIColorExtensionTests: QuickSpec {
                 expect(subject1).to(equal( UIColor.redColor() ))
                 expect(subject2).to(equal( UIColor.greenColor() ))
                 expect(subject3).to(equal( UIColor.blueColor() ))
+            }
+            
+            it("should invert the current color") {
+                let subject = UIColor(red: 0.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                
+                let result = subject.r2dInverseColor
+                
+                expect(result).to(equal(UIColor.redColor()))
             }
         }
     }

@@ -22,17 +22,21 @@ public protocol R2DAttackComponent {
 extension R2DAttackComponent where Self: R2DAttackProperties, Self: SKSpriteNode {
     public func startLookingForPrey() {
         self.runAction( SKAction.repeatActionForever(SKAction.sequence([
-            SKAction.runBlock {
-                guard let aPrey = self.prey else { return }
-                switch aPrey.position.x {
-                case self.r2d_leftX...self.r2d_rightX:
-                    self.foundPrey()
-                default:
-                    break
-                }
+            SKAction.runBlock { [unowned self] in
+                self.lookForPrey()
             },
             SKAction.waitForDuration(0.35, withRange: 0.25)
         ])) )
+    }
+    
+    func lookForPrey() {
+        guard let aPrey = self.prey else { return }
+        switch aPrey.position.x {
+            case self.r2d_leftX...self.r2d_rightX:
+                self.foundPrey()
+            default:
+                break
+        }
     }
     
     public func foundPrey() {

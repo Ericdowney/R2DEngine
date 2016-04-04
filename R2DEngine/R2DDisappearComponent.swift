@@ -21,10 +21,10 @@ public protocol R2DBlinkComponent {
 public extension R2DBlinkComponent where Self: SKNode, Self: R2DBlinkProperties {
     func blink() {
         var sequence: [SKAction] = []
-        for _ in 0..<numberOfBlinks {
+        self.numberOfBlinks.r2d_each {
             sequence.append(self.blinkAction())
         }
-        sequence.append(SKAction.runBlock {
+        sequence.append(SKAction.runBlock { [unowned self] in
             self.blinkEndAction?()
         })
         

@@ -9,7 +9,7 @@
 import SpriteKit
 
 public protocol R2DGameManagerProperties {
-    typealias Hud: R2DHudManager
+    associatedtype Hud: R2DHudManager
     var hudManager: Hud { get }
     var gameHudName: String { get set }
     var pauseHudName: String { get set }
@@ -46,8 +46,12 @@ public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, S
         self.physicsWorld.contactDelegate = self
     }
     
-    // TODO: Find out why this is not working
-    func didBeginContact(contact: SKPhysicsContact) {
+    /**
+     This is to get around delegate method for SKPhysicsContactDelegate
+        - didBeginContact
+     Delegate methods can not have default values from Protocol Extensions.
+     **/
+    func beginPhysicsContact(contact: SKPhysicsContact) {
         if let gameComponent = contact.bodyA.node as? R2DGameComponent {
             gameComponent.updateCollision(contact, gameManager: self)
         }
@@ -55,6 +59,16 @@ public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, S
             gameComponent.updateCollision(contact, gameManager: self)
         }
     }
+    
+    // TODO: Find out why this is not working
+//    func didBeginContact(contact: SKPhysicsContact) {
+//        if let gameComponent = contact.bodyA.node as? R2DGameComponent {
+//            gameComponent.updateCollision(contact, gameManager: self)
+//        }
+//        if let gameComponent = contact.bodyB.node as? R2DGameComponent {
+//            gameComponent.updateCollision(contact, gameManager: self)
+//        }
+//    }
 }
 
 public typealias R2DGameManager = protocol<R2DGameManagerProperties, R2DGameManagerComponent>

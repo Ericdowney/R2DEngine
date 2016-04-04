@@ -28,7 +28,8 @@ public protocol R2DSpawnerComponent {
 
 public extension R2DSpawnerComponent where Self: R2DSpawnProperties {
     func spawn() -> [R2DScrollingComponent] {
-        return self.spawnNodes(seed: self.seed++, type: self.spawnType)
+        self.seed += 1
+        return self.spawnNodes(seed: self.seed, type: self.spawnType)
     }
 }
 

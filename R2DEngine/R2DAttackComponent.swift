@@ -9,8 +9,8 @@
 import SpriteKit
 
 public protocol R2DAttackProperties {
-    typealias Prey: SKSpriteNode
-    var prey: Prey? { get set }
+    associatedtype Prey: SKSpriteNode
+    weak var prey: Prey? { get set }
 }
 
 public protocol R2DAttackComponent {

@@ -29,7 +29,7 @@ public extension R2DDoubleJumpComponent where Self: R2DJumpProperties, Self: SKS
     func jump() {
         if self.jumpCount < 2 {
             self.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
-            ++self.jumpCount
+            self.jumpCount += 1
         }
     }
     
@@ -50,7 +50,7 @@ public extension R2DInfiniteJumpComponent where Self: R2DJumpProperties, Self: S
     
     func jump() {
         self.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
-        ++self.jumpCount
+        self.jumpCount += 1
     }
     
     func resetJump() {

@@ -25,7 +25,7 @@ public protocol R2DPlayerComponent {
 
 public extension R2DPlayerComponent where Self: R2DPlayerProperties {
     func hurtPlayer() {
-        self.health--
+        self.health -= 1
     }
 }
 

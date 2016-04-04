@@ -34,19 +34,19 @@ public extension R2DHudManagerComponent where Self: R2DHudManagerProperties {
     }
     
     func showHud(name: String) -> R2DHud? {
-        var hud: R2DHud? = self.hudComponents.filter { $0.hudName == name }[0]
+        var hud: R2DHud? = self.getHud(name)
         hud?.show()
         return hud
     }
     
     func hideHud(name: String) -> R2DHud? {
-        var hud: R2DHud? = self.hudComponents.filter { $0.hudName == name }[0]
+        var hud: R2DHud? = self.getHud(name)
         hud?.hide()
         return hud
     }
     
     func getHud(name: String) -> R2DHud? {
-        return self.hudComponents.filter { $0.hudName == name }[0]
+        return self.hudComponents.filter { $0.hudName == name }.first
     }
     
     func switchToHud(name: String) {

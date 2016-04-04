@@ -18,6 +18,7 @@ public protocol R2DGameManagerProperties {
 }
 
 public protocol R2DGameManagerComponent: SKPhysicsContactDelegate {
+    func startGame()
     func resumeGame()
     func pauseGame()
     func gameOver()

@@ -20,13 +20,13 @@ public protocol R2DDashComponent {
 
 public extension R2DDashComponent where Self: R2DDashProperties, Self: SKSpriteNode {
     var dashDelta: CGVector {
-        return self.dashDirection.vector.r2d_multiplyBy(self.dashSpeed)
+        return self.dashDirection.vector * self.dashSpeed
     }
     
     func dash() {
         self.runAction( SKAction.sequence([
             SKAction.runBlock {
-                self.position.r2d_addVector(self.dashDelta)
+                self.position += self.dashDelta
             },
             SKAction.waitForDuration(1.0)
         ]) )

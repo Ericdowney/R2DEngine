@@ -20,7 +20,7 @@ class CGPointExtensionTests: QuickSpec {
                 let subject = CGPoint(x: 10.5, y: 30.3)
                 let vec = CGVector(dx: 205.0, dy: 283.0)
                 
-                let result = subject.r2d_addVector(vec)
+                let result = subject + vec
                 
                 expect(result.x).to(equal( 215.5 ))
                 expect(result.y).to(equal( 313.3 ))

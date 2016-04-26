@@ -22,7 +22,7 @@ public protocol R2DScrollingComponent {
 
 public extension R2DScrollingComponent where Self: R2DScrollingProperties {
     var scrollDelta: CGVector {
-        return self.scrollDirection.vector.r2d_multiplyBy(self.scrollSpeed)
+        return self.scrollDirection.vector * self.scrollSpeed
     }
     
     func moveAction() -> SKAction {

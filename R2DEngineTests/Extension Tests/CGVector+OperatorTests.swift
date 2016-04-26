@@ -19,7 +19,7 @@ class CGVectorExtensionTests: QuickSpec {
             it("should multiply a CGVector by an amount appropriately") {
                 let subject = CGVector(dx: 11.0, dy: 4.0)
                 
-                let result = subject.r2d_multiplyBy(3)
+                let result = subject * 3
                 
                 expect(result.dx).to(equal( 33.0 ))
                 expect(result.dy).to(equal( 12.0 ))

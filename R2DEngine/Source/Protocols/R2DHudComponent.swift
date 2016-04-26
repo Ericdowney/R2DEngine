@@ -10,6 +10,7 @@ import SpriteKit
 
 public protocol R2DHudComponentProperties {
     var hudName: String { get set }
+    var hidden: Bool { get set }
 }
 
 public protocol R2DHudComponent {
@@ -18,7 +19,7 @@ public protocol R2DHudComponent {
     func initialize<T: SKScene where T: R2DGameManager>(gameManager: T)
 }
 
-extension R2DHudComponent where Self: SKNode {
+extension R2DHudComponent where Self: R2DHudComponentProperties {
     mutating public func hide() {
         self.hidden = true
     }

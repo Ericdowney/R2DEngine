@@ -13,3 +13,39 @@ public extension CGPoint {
         return CGPoint(x: self.x + vector.dx, y: self.y + vector.dy)
     }
 }
+
+// MARK: - Simple: a + b, a - b, etc
+
+public func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+    return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
+}
+
+public func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+    return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
+}
+
+public func *(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+    return CGPoint(x: lhs.x * rhs.x, y: lhs.y * rhs.y)
+}
+
+public func /(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+    return CGPoint(x: lhs.x / rhs.x, y: lhs.y / rhs.y)
+}
+
+// MARK: - Inout: a += b, a -= b, etc
+
+public func +=(inout lhs: CGPoint, rhs: CGPoint) {
+    lhs = CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
+}
+
+public func -=(inout lhs: CGPoint, rhs: CGPoint) {
+    lhs = CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
+}
+
+public func *=(inout lhs: CGPoint, rhs: CGPoint) {
+    lhs = CGPoint(x: lhs.x * rhs.x, y: lhs.y * rhs.y)
+}
+
+public func /=(inout lhs: CGPoint, rhs: CGPoint) {
+    lhs = CGPoint(x: lhs.x / rhs.x, y: lhs.y / rhs.y)
+}

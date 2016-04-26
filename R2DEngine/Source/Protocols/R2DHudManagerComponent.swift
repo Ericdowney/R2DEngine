@@ -18,6 +18,7 @@ public protocol R2DHudManagerComponent {
     func showHud(name: String) -> R2DHud?
     func hideHud(name: String) -> R2DHud?
     func getHud(name: String) -> R2DHud?
+    func getAllHudsExcept(name: String) -> [R2DHud]
     func switchToHud(name: String)
 }
 
@@ -47,6 +48,10 @@ public extension R2DHudManagerComponent where Self: R2DHudManagerProperties {
     
     func getHud(name: String) -> R2DHud? {
         return self.hudComponents.filter { $0.hudName == name }.first
+    }
+    
+    func getAllHudsExcept(name: String) -> [R2DHud] {
+        return self.hudComponents.filter { $0.hudName != name }
     }
     
     func switchToHud(name: String) {

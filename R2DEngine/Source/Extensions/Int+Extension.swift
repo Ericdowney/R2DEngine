@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension IntegerLiteralType {
+public extension Int {
     func r2d_times(@noescape action: Void -> Void) {
         for _ in 0..<self {
             action()

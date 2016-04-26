@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8914EF0C1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914EF0B1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift */; };
+		892CD90E1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892CD90D1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift */; };
 		8935747E1C4ACBC300689E43 /* R2DHudComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */; };
 		893574801C4ACBD800689E43 /* R2DHudManagerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */; };
 		893574821C4B1E3B00689E43 /* R2DGameManagerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */; };
@@ -18,7 +20,7 @@
 		8935749B1C4B70F200689E43 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */; };
 		89720DB61C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB51C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift */; };
 		89720DB81C52BC5F00307CD0 /* CGVector+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB71C52BC5F00307CD0 /* CGVector+ExtensionTests.swift */; };
-		89720DBA1C52BD5800307CD0 /* UIColor+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB91C52BD5800307CD0 /* UIColor+ExtensionTests.swift */; };
+		89720DBA1C52BD5800307CD0 /* SKColor+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB91C52BD5800307CD0 /* SKColor+ExtensionTests.swift */; };
 		8972E9451C404F0000DC4FA5 /* R2DScrollingPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */; };
 		898AE5991C514D8A00AD0A51 /* R2DDashComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898AE5981C514D8A00AD0A51 /* R2DDashComponent.swift */; };
 		898AE59E1C529F4800AD0A51 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898AE59A1C529F3900AD0A51 /* Nimble.framework */; };
@@ -26,7 +28,7 @@
 		89948A7E1CB2BDDD00733069 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89948A7D1CB2BDDD00733069 /* Int+Extension.swift */; };
 		89948A851CB2CC4800733069 /* Int+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89948A841CB2CC4800733069 /* Int+ExtensionTests.swift */; };
 		89948A871CB2CF2400733069 /* R2DAttackComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89948A861CB2CF2400733069 /* R2DAttackComponentTests.swift */; };
-		899C4E1B1C41F2A100F77F68 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1A1C41F2A100F77F68 /* UIColor+Extension.swift */; };
+		899C4E1B1C41F2A100F77F68 /* SKColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1A1C41F2A100F77F68 /* SKColor+Extension.swift */; };
 		899C4E1D1C41F6D800F77F68 /* R2DButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E1C1C41F6D800F77F68 /* R2DButton.swift */; };
 		899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E311C4232BA00F77F68 /* R2DPlatform.swift */; };
 		899C4E361C455BED00F77F68 /* R2DSpawnerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */; };
@@ -38,7 +40,6 @@
 		89B9060B1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B9060A1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift */; };
 		89D9AA471C4C77E100CCB90B /* R2DDisappearComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */; };
 		89D9AA5C1C4C8A5100CCB90B /* R2DGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */; };
-		89D9AA5E1C4D55CA00CCB90B /* R2DMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */; };
 		89D9AA701C4EB12500CCB90B /* R2DAttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D9AA6F1C4EB12500CCB90B /* R2DAttackComponent.swift */; };
 		89F4E17F1C404488008EDD2A /* R2DEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F4E17E1C404488008EDD2A /* R2DEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89F4E1861C404488008EDD2A /* R2DEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F4E17B1C404488008EDD2A /* R2DEngine.framework */; };
@@ -77,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8914EF0B1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DSpawnerComponentTests.swift; path = R2DEngineTests/R2DSpawnerComponentTests.swift; sourceTree = SOURCE_ROOT; };
+		892CD90D1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DScrollingComponentTests.swift; path = R2DEngineTests/R2DScrollingComponentTests.swift; sourceTree = SOURCE_ROOT; };
 		8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudComponent.swift; sourceTree = "<group>"; };
 		8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudManagerComponent.swift; sourceTree = "<group>"; };
 		893574811C4B1E3B00689E43 /* R2DGameManagerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DGameManagerComponent.swift; sourceTree = "<group>"; };
@@ -88,7 +91,7 @@
 		8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
 		89720DB51C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+ExtensionTests.swift"; sourceTree = "<group>"; };
 		89720DB71C52BC5F00307CD0 /* CGVector+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+ExtensionTests.swift"; sourceTree = "<group>"; };
-		89720DB91C52BD5800307CD0 /* UIColor+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ExtensionTests.swift"; sourceTree = "<group>"; };
+		89720DB91C52BD5800307CD0 /* SKColor+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+ExtensionTests.swift"; sourceTree = "<group>"; };
 		8972E9441C404F0000DC4FA5 /* R2DScrollingPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DScrollingPlatform.swift; sourceTree = "<group>"; };
 		898AE5981C514D8A00AD0A51 /* R2DDashComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DDashComponent.swift; sourceTree = "<group>"; };
 		898AE59A1C529F3900AD0A51 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -96,7 +99,7 @@
 		89948A7D1CB2BDDD00733069 /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		89948A841CB2CC4800733069 /* Int+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ExtensionTests.swift"; sourceTree = "<group>"; };
 		89948A861CB2CF2400733069 /* R2DAttackComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DAttackComponentTests.swift; path = R2DEngineTests/R2DAttackComponentTests.swift; sourceTree = SOURCE_ROOT; };
-		899C4E1A1C41F2A100F77F68 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		899C4E1A1C41F2A100F77F68 /* SKColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+Extension.swift"; sourceTree = "<group>"; };
 		899C4E1C1C41F6D800F77F68 /* R2DButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DButton.swift; sourceTree = "<group>"; };
 		899C4E311C4232BA00F77F68 /* R2DPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlatform.swift; sourceTree = "<group>"; };
 		899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DSpawnerComponent.swift; sourceTree = "<group>"; };
@@ -106,7 +109,6 @@
 		89B9060A1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+ExtensionTests.swift"; sourceTree = "<group>"; };
 		89D9AA461C4C77E100CCB90B /* R2DDisappearComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DDisappearComponent.swift; sourceTree = "<group>"; };
 		89D9AA5B1C4C8A5100CCB90B /* R2DGameComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DGameComponent.swift; sourceTree = "<group>"; };
-		89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DMessenger.swift; sourceTree = "<group>"; };
 		89D9AA6F1C4EB12500CCB90B /* R2DAttackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DAttackComponent.swift; sourceTree = "<group>"; };
 		89F4E17B1C404488008EDD2A /* R2DEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = R2DEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F4E17E1C404488008EDD2A /* R2DEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = R2DEngine.h; sourceTree = "<group>"; };
@@ -156,7 +158,6 @@
 				8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */,
 				8935747F1C4ACBD800689E43 /* R2DHudManagerComponent.swift */,
 				899C4E661C47403200F77F68 /* R2DJumpComponent.swift */,
-				89D9AA5D1C4D55CA00CCB90B /* R2DMessenger.swift */,
 				893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */,
 				899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */,
 				899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */,
@@ -194,7 +195,7 @@
 				89948A841CB2CC4800733069 /* Int+ExtensionTests.swift */,
 				89B906081C52A1F700138743 /* SKNode+ExtensionTests.swift */,
 				89B9060A1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift */,
-				89720DB91C52BD5800307CD0 /* UIColor+ExtensionTests.swift */,
+				89720DB91C52BD5800307CD0 /* SKColor+ExtensionTests.swift */,
 			);
 			path = "Extension Tests";
 			sourceTree = "<group>";
@@ -203,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				89948A861CB2CF2400733069 /* R2DAttackComponentTests.swift */,
+				892CD90D1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift */,
+				8914EF0B1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift */,
 			);
 			path = "Protocol Tests";
 			sourceTree = "<group>";
@@ -263,7 +266,7 @@
 				89948A7D1CB2BDDD00733069 /* Int+Extension.swift */,
 				89F4E19F1C4044E4008EDD2A /* SKNode+Extension.swift */,
 				8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */,
-				899C4E1A1C41F2A100F77F68 /* UIColor+Extension.swift */,
+				899C4E1A1C41F2A100F77F68 /* SKColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -417,7 +420,6 @@
 				8935749B1C4B70F200689E43 /* SKSpriteNode+Extension.swift in Sources */,
 				89D9AA5C1C4C8A5100CCB90B /* R2DGameComponent.swift in Sources */,
 				89F4E19A1C4044C9008EDD2A /* R2DDirection.swift in Sources */,
-				89D9AA5E1C4D55CA00CCB90B /* R2DMessenger.swift in Sources */,
 				899C4E321C4232BA00F77F68 /* R2DPlatform.swift in Sources */,
 				89F4E1A01C4044E4008EDD2A /* SKNode+Extension.swift in Sources */,
 				899C4E641C473A9200F77F68 /* R2DScrollingComponent.swift in Sources */,
@@ -425,7 +427,7 @@
 				89F4E19C1C4044D4008EDD2A /* CGPoint+Extension.swift in Sources */,
 				8935747E1C4ACBC300689E43 /* R2DHudComponent.swift in Sources */,
 				899C4E671C47403200F77F68 /* R2DJumpComponent.swift in Sources */,
-				899C4E1B1C41F2A100F77F68 /* UIColor+Extension.swift in Sources */,
+				899C4E1B1C41F2A100F77F68 /* SKColor+Extension.swift in Sources */,
 				893574861C4B1F1E00689E43 /* R2DSpawnerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,8 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892CD90E1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift in Sources */,
+				8914EF0C1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift in Sources */,
 				89F4E18B1C404488008EDD2A /* R2DEngineTests.swift in Sources */,
-				89720DBA1C52BD5800307CD0 /* UIColor+ExtensionTests.swift in Sources */,
+				89720DBA1C52BD5800307CD0 /* SKColor+ExtensionTests.swift in Sources */,
 				89948A851CB2CC4800733069 /* Int+ExtensionTests.swift in Sources */,
 				89B9060B1C52A37100138743 /* SKSpriteNode+ExtensionTests.swift in Sources */,
 				89720DB61C52BA9D00307CD0 /* CGPoint+ExtensionTests.swift in Sources */,

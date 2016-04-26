@@ -20,31 +20,31 @@ class SKSpriteNodeExtensionTests: QuickSpec {
             it("should set anchor point based on enum value") {
                 let subject = SKSpriteNode()
                 
-                subject.r2d_setAnchor(.BottomLeft)
+                subject.r2dAnchor = .BottomLeft
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 0.0, y: 0.0) ))
                 
-                subject.r2d_setAnchor(.BottomRight)
+                subject.r2dAnchor = .BottomRight
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 1.0, y: 0.0) ))
                 
-                subject.r2d_setAnchor(.TopLeft)
+                subject.r2dAnchor = .TopLeft
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 0.0, y: 1.0) ))
                 
-                subject.r2d_setAnchor(.TopRight)
+                subject.r2dAnchor = .TopRight
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 1.0, y: 1.0) ))
                 
-                subject.r2d_setAnchor(.Center)
+                subject.r2dAnchor = .Center
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 0.5, y: 0.5) ))
                 
-                subject.r2d_setAnchor(.Right)
+                subject.r2dAnchor = .Right
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 1.0, y: 0.5) ))
                 
-                subject.r2d_setAnchor(.Left)
+                subject.r2dAnchor = .Left
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 0.0, y: 0.5) ))
                 
-                subject.r2d_setAnchor(.Top)
+                subject.r2dAnchor = .Top
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 0.5, y: 1.0) ))
                 
-                subject.r2d_setAnchor(.Bottom)
+                subject.r2dAnchor = .Bottom
                 expect(subject.anchorPoint).to(equal( CGPoint(x: 0.5, y: 0.0) ))
             }
             

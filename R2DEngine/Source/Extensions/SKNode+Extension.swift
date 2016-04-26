@@ -9,16 +9,40 @@
 import SpriteKit
 
 extension SKNode {
+    
+    // MARK: - Init
+    
     public convenience init(r2d_name: String) {
         self.init()
         self.name = r2d_name
     }
     
-    public func r2d_addChildren(nodes: SKNode...) {
+    // MARK: - Add Children
+    
+    public func r2d_addChildren(nodes: SKNode...) -> Self {
         nodes.forEach { self.addChild($0) }
+        return self
     }
     
-    public func r2d_addChildren(nodes: [SKNode]) {
+    public func r2d_addChildren(nodes: [SKNode]) -> Self {
         nodes.forEach { self.addChild($0) }
+        return self
+    }
+    
+    // MARK: - Loop through Children
+    
+    public func eachChild(@noescape loop: SKNode -> Void) -> Self {
+        children.forEach(loop)
+        return self
+    }
+    
+    public func eachChildWithName(name: String, @noescape loop: SKNode -> Void) -> Self {
+        children.filter { $0.name == name }.forEach(loop)
+        return self
+    }
+    
+    public func eachChildContainsName(name: String, @noescape loop: SKNode -> Void) -> Self {
+        children.filter { $0.name?.containsString(name) ?? false }.forEach(loop)
+        return self
     }
 }

@@ -17,20 +17,28 @@ public protocol R2DPlayerProperties: class {
     var health: Int { get set }
 }
 
+public protocol R2DPlayerDeathDelegateContainer {
+    var delegate: R2DPlayerDeathDelegate? { get set }
+}
+
 public protocol R2DPlayerComponent {
     func updatePlayer(currentTime: CFTimeInterval)
     func resetPlayer()
     func hurtPlayer()
 }
 
-public extension R2DPlayerComponent where Self: R2DPlayerProperties {
+public extension R2DPlayerComponent where Self: R2DPlayerProperties, Self: R2DPlayerDeathDelegateContainer {
     func hurtPlayer() {
         self.health -= 1
+        if self.health <= 0 {
+            self.delegate?.playerDied(self)
+        }
     }
 }
 
 public protocol R2DPlayerDeathDelegate {
-    func playerDied()
+    /// Parameter name is "underscore" to allow user to fill in parameter name of their choosing
+    func playerDied(_: R2DPlayer)
 }
 
-public typealias R2DPlayer = protocol<R2DPlayerProperties, R2DPlayerComponent>
+public typealias R2DPlayer = protocol<R2DPlayerProperties, R2DPlayerComponent, R2DPlayerDeathDelegateContainer>

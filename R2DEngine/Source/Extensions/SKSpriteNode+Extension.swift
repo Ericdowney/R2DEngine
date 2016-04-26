@@ -9,8 +9,16 @@
 import SpriteKit
 
 public extension SKSpriteNode {
-    public func r2d_setAnchor(anchor: R2DAnchorPoint) {
-        self.anchorPoint = anchor.value
+    
+    // MARK: - Properties
+    
+    public var r2dAnchor: R2DAnchorPoint {
+        get {
+            return R2DAnchorPoint.fromCGPoint(self.anchorPoint)
+        }
+        set {
+            self.anchorPoint = newValue.value
+        }
     }
     
     // MARK: - X
@@ -31,5 +39,32 @@ public extension SKSpriteNode {
     
     public var r2d_bottomY: CGFloat {
         return self.position.y - (self.size.height * self.anchorPoint.y)
+    }
+    
+    // MARK: - Setters
+    
+    public func r2d_color(color: SKColor) -> Self {
+        self.color = color
+        return self
+    }
+    
+    public func r2d_position(position: CGPoint) -> Self {
+        self.position = position
+        return self
+    }
+    
+    public func r2d_anchor(anchor: R2DAnchorPoint) -> Self {
+        self.anchorPoint = anchor.value
+        return self
+    }
+    
+    public func r2d_texture(texture: SKTexture) -> Self {
+        self.texture = texture
+        return self
+    }
+    
+    public func r2d_imageNamed(imageNamed: String) -> Self {
+        self.texture = SKTexture(imageNamed: imageNamed)
+        return self
     }
 }

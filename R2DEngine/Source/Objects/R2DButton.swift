@@ -21,8 +21,8 @@ public class R2DButton: SKNode {
         }
     }
     
-    private var originalFontColor: UIColor? = nil
-    public var fontColor: UIColor = .whiteColor() {
+    private var originalFontColor: SKColor? = nil
+    public var fontColor: SKColor = .whiteColor() {
         didSet {
             if self.originalFontColor == nil { self.originalFontColor = self.fontColor }
             guard let label = self.childNodeWithName("button_label") as? SKLabelNode else { return }
@@ -40,7 +40,7 @@ public class R2DButton: SKNode {
         self.init(sprite: sprite, label: label)
     }
     
-    public convenience init(color: UIColor, size: CGSize, text: String, fontName: String) {
+    public convenience init(color: SKColor, size: CGSize, text: String, fontName: String) {
         let sprite = SKSpriteNode(color: color, size: size)
         sprite.name = "button_sprite"
         let label = SKLabelNode(fontNamed: fontName)
@@ -80,7 +80,7 @@ public class R2DButton: SKNode {
     public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesEnded(touches, withEvent: event)
         
-        self.fontColor = self.originalFontColor ?? UIColor.clearColor()
+        self.fontColor = self.originalFontColor ?? SKColor.clearColor()
         self.tapCallback?(self)
     }
 }

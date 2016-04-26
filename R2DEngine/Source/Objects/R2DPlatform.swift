@@ -19,7 +19,7 @@ public class R2DPlatform: SKSpriteNode {
         self.physicsBody?.dynamic = false
     }
     
-    public init(color: UIColor, size: CGSize) {
+    public init(color: SKColor, size: CGSize) {
         super.init(texture: nil, color: color, size: size)
         
         self.anchorPoint = CGPoint(x: 0.0, y: 0.0)

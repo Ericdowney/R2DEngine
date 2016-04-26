@@ -18,6 +18,7 @@ public enum R2DAnchorPoint {
     case BottomRight
     case TopLeft
     case TopRight
+    case None
     
     public var value: CGPoint {
         switch self {
@@ -28,8 +29,35 @@ public enum R2DAnchorPoint {
         case Bottom: return CGPoint(x: 0.5, y: 0.0)
         case BottomLeft: return CGPoint(x: 0.0, y: 0.0)
         case BottomRight: return CGPoint(x: 1.0, y: 0.0)
-        case TopLeft: return CGPoint(x: 0.0, y: 1)
-        case TopRight: return CGPoint(x: 1, y: 1)
+        case TopLeft: return CGPoint(x: 0.0, y: 1.0)
+        case TopRight: return CGPoint(x: 1.0, y: 1.0)
+        default:
+            return CGPointZero
+        }
+    }
+    
+    public static func fromCGPoint(point: CGPoint) -> R2DAnchorPoint {
+        switch point {
+        case CGPoint(x: 0.5, y: 0.5):
+            return .Center
+        case CGPoint(x: 0.0, y: 0.5):
+            return .Left
+        case CGPoint(x: 1.0, y: 0.5):
+            return .Right
+        case CGPoint(x: 0.5, y: 1.0):
+            return .Top
+        case CGPoint(x: 0.5, y: 0.0):
+            return .Bottom
+        case CGPoint(x: 0.0, y: 0.0):
+            return .BottomLeft
+        case CGPoint(x: 1.0, y: 0.0):
+            return .BottomRight
+        case CGPoint(x: 0.0, y: 1.0):
+            return .TopLeft
+        case CGPoint(x: 1.0, y: 1.0):
+            return .TopRight
+        default:
+            return .None
         }
     }
 }

@@ -13,3 +13,39 @@ public extension CGVector {
         return CGVector(dx: self.dx * amount, dy: self.dy * amount)
     }
 }
+
+// MARK: - Simple: a + b, a - b, etc
+
+public func +(lhs: CGVector, rhs: CGVector) -> CGVector {
+    return CGVector(dx: lhs.dx + rhs.dx, dy: lhs.dy + rhs.dy)
+}
+
+public func -(lhs: CGVector, rhs: CGVector) -> CGVector {
+    return CGVector(dx: lhs.dx - rhs.dx, dy: lhs.dy - rhs.dy)
+}
+
+public func *(lhs: CGVector, rhs: CGVector) -> CGVector {
+    return CGVector(dx: lhs.dx * rhs.dx, dy: lhs.dy * rhs.dy)
+}
+
+public func /(lhs: CGVector, rhs: CGVector) -> CGVector {
+    return CGVector(dx: lhs.dx / rhs.dx, dy: lhs.dy / rhs.dy)
+}
+
+// MARK: - Inout: a += b, a -= b, etc
+
+public func +=(inout lhs: CGVector, rhs: CGVector) {
+    lhs = CGVector(dx: lhs.dx + rhs.dx, dy: lhs.dy + rhs.dy)
+}
+
+public func -=(inout lhs: CGVector, rhs: CGVector) {
+    lhs = CGVector(dx: lhs.dx - rhs.dx, dy: lhs.dy - rhs.dy)
+}
+
+public func *=(inout lhs: CGVector, rhs: CGVector) {
+    lhs = CGVector(dx: lhs.dx * rhs.dx, dy: lhs.dy * rhs.dy)
+}
+
+public func /=(inout lhs: CGVector, rhs: CGVector) {
+    lhs = CGVector(dx: lhs.dx / rhs.dx, dy: lhs.dy / rhs.dy)
+}

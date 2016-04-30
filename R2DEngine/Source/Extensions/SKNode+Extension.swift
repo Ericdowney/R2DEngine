@@ -10,6 +10,26 @@ import SpriteKit
 
 extension SKNode {
     
+    // MARK: - Properties
+    
+    public var r2dPosition: (x: CGFloat, y: CGFloat) {
+        get {
+            return ( self.position.x, self.position.y )
+        }
+        set {
+            self.position = CGPoint(x: newValue.x, y: newValue.y)
+        }
+    }
+    
+    public var r2dPositionPercent: (x: CGFloat, y: CGFloat) {
+        get {
+            return ( self.position.x / R2DUtils.screenWidth, self.position.y / R2DUtils.screenHeight )
+        }
+        set {
+            self.position = R2DUtils.getX(newValue.x, y: newValue.y)
+        }
+    }
+    
     // MARK: - Init
     
     public convenience init(r2d_name: String) {
@@ -43,6 +63,23 @@ extension SKNode {
     
     public func eachChildContainsName(name: String, @noescape loop: SKNode -> Void) -> Self {
         children.filter { $0.name?.containsString(name) ?? false }.forEach(loop)
+        return self
+    }
+    
+    // MARK: - Setters
+    
+    public func r2d_position(position: CGPoint) -> Self {
+        self.position = position
+        return self
+    }
+    
+    public func r2d_position(x: CGFloat, y: CGFloat) -> Self {
+        self.position = R2DUtils.getX(x, y: y)
+        return self
+    }
+    
+    public func r2d_addToNode(node: SKNode) -> Self {
+        node.addChild(self)
         return self
     }
 }

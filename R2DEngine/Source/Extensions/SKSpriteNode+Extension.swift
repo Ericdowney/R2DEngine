@@ -48,11 +48,6 @@ public extension SKSpriteNode {
         return self
     }
     
-    public func r2d_position(position: CGPoint) -> Self {
-        self.position = position
-        return self
-    }
-    
     public func r2d_anchor(anchor: R2DAnchorPoint) -> Self {
         self.anchorPoint = anchor.value
         return self

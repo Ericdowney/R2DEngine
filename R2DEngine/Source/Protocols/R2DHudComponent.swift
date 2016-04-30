@@ -29,4 +29,4 @@ extension R2DHudComponent where Self: R2DHudComponentProperties {
     }
 }
 
-public typealias R2DHud = protocol<R2DHudComponentProperties,R2DHudComponent>
+public typealias R2DHud = protocol<R2DHudComponentProperties, R2DHudComponent>

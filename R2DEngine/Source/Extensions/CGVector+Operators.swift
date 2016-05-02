@@ -82,20 +82,20 @@ public func /=(inout lhs: CGVector, rhs: CGVector) {
 
 // MARK: - CGVector + - * / CGPoint
 
-public func +(lhs: CGVector, rhs: CGPoint) -> CGPoint {
-    return CGPoint(x: lhs.dx + rhs.x, y: lhs.dy + rhs.y)
+public func +(lhs: CGVector, rhs: CGPoint) -> CGVector {
+    return CGVector(dx: lhs.dx + rhs.x, dy: lhs.dy + rhs.y)
 }
 
-public func -(lhs: CGVector, rhs: CGPoint) -> CGPoint {
-    return CGPoint(x: lhs.dx - rhs.x, y: lhs.dy - rhs.y)
+public func -(lhs: CGVector, rhs: CGPoint) -> CGVector {
+    return CGVector(dx: lhs.dx - rhs.x, dy: lhs.dy - rhs.y)
 }
 
-public func *(lhs: CGVector, rhs: CGPoint) -> CGPoint {
-    return CGPoint(x: lhs.dx * rhs.x, y: lhs.dy * rhs.y)
+public func *(lhs: CGVector, rhs: CGPoint) -> CGVector {
+    return CGVector(dx: lhs.dx * rhs.x, dy: lhs.dy * rhs.y)
 }
 
-public func /(lhs: CGVector, rhs: CGPoint) -> CGPoint {
-    return CGPoint(x: lhs.dx / rhs.x, y: lhs.dy / rhs.y)
+public func /(lhs: CGVector, rhs: CGPoint) -> CGVector {
+    return CGVector(dx: lhs.dx / rhs.x, dy: lhs.dy / rhs.y)
 }
 
 // MARK: - CGVector += -= *= /= CGPoint

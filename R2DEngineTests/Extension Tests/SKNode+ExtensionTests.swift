@@ -14,35 +14,153 @@ import Quick
 import Nimble
 
 class SKNodeExtensionTests: QuickSpec {
-    
     override func spec() {
-        
         describe("SKNode") {
-            
-            it("should construct an SKNode with a name") {
-                let subject = SKNode(r2d_name: "aNode")
-                
-                expect(subject.name).to(contain("aNode"))
+            describe("Initializer") {
+                it("should construct an SKNode with a name") {
+                    let subject = SKNode(r2d_name: "aNode")
+                    
+                    expect(subject.name).to(contain("aNode"))
+                }
             }
             
-            it("should add multiple nodes as children from variadic params") {
-                let subject = SKNode()
-                let c1 = SKNode(r2d_name: "node1")
-                let c2 = SKNode(r2d_name: "node2")
+            describe("SKNode Properties") {
+                var subject: SKNode!
                 
-                subject.r2d_addChildren(c1, c2)
+                beforeEach {
+                    subject = SKNode()
+                }
                 
-                expect(subject.children).to(contain(c1, c2))
+                it("should get the node's position as a tuple") {
+                    subject.position = CGPoint(x: 11, y: 12)
+                    
+                    let result = subject.r2dPosition
+                    
+                    expect(result.x).to(equal(11))
+                    expect(result.y).to(equal(12))
+                }
+                
+                it("should set position from tuple") {
+                    
+                    subject.r2dPosition = (1.0, 3.0)
+                    
+                    expect(subject.position.x).to(equal(1.0))
+                    expect(subject.position.y).to(equal(3.0))
+                }
             }
             
-            it("should add multiple nodes as children from an array of params") {
-                let subject = SKNode()
-                let c1 = SKNode(r2d_name: "node1")
-                let c2 = SKNode(r2d_name: "node2")
+            describe("Adding Children") {
+                var subject: SKNode!
                 
-                subject.r2d_addChildren([c1, c2])
+                beforeEach {
+                    subject = SKNode()
+                }
                 
-                expect(subject.children).to(contain(c1, c2))
+                it("should add multiple nodes as children from variadic params") {
+                    let c1 = SKNode(r2d_name: "node1")
+                    let c2 = SKNode(r2d_name: "node2")
+                    
+                    subject.r2d_addChildren(c1, c2)
+                    
+                    expect(subject.children).to(contain(c1, c2))
+                }
+                
+                it("should add multiple nodes as children from an array of params") {
+                    let c1 = SKNode(r2d_name: "node1")
+                    let c2 = SKNode(r2d_name: "node2")
+                    
+                    subject.r2d_addChildren([c1, c2])
+                    
+                    expect(subject.children).to(contain(c1, c2))
+                }
+                
+                it("should add the current node to another node") {
+                    let other = SKNode()
+                    
+                    subject.r2d_addToNode(other)
+                    
+                    expect(other.children).to(contain(subject))
+                }
+            }
+            
+            describe("Looping Children") {
+                var subject: SKNode!
+                
+                beforeEach {
+                    subject = SKNode()
+                }
+                
+                it("should run the loop closure for each child of node") {
+                    let c1 = SKNode()
+                    let c2 = SKNode()
+                    subject.addChild(c1)
+                    subject.addChild(c2)
+                    var times = 0
+                    
+                    subject.r2d_eachChild { _ in
+                        times += 1
+                    }
+                    
+                    expect(times).to(equal(2))
+                }
+                
+                it("should run the loop closure for each child with the specified name") {
+                    let c1 = SKNode()
+                    let c2 = SKNode()
+                    c1.name = "1"
+                    c2.name = "2"
+                    subject.addChild(c1)
+                    subject.addChild(c2)
+                    var times = 0
+                    
+                    subject.r2d_eachChildWithName("1") { _ in
+                        times += 1
+                    }
+                    
+                    expect(times).to(equal(1))
+                }
+                
+                it("should run the loop closure for each child that contains the specified name") {
+                    let c1 = SKNode()
+                    let c2 = SKNode()
+                    let c3 = SKNode()
+                    c1.name = "1fdggddfsg"
+                    c2.name = "gsfdgsf1d1"
+                    subject.addChild(c1)
+                    subject.addChild(c2)
+                    subject.addChild(c3)
+                    var times = 0
+                    
+                    subject.r2d_eachChildContainsName("1") { _ in
+                        times += 1
+                    }
+                    
+                    expect(times).to(equal(2))
+                }
+            }
+            
+            describe("Position Setters") {
+                var subject: SKNode!
+                
+                beforeEach {
+                    subject = SKNode()
+                }
+                
+                it("should set the position from a CGPoint") {
+                    let p1 = CGPoint(x: 15, y: 20)
+                    
+                    subject.r2d_position(p1)
+                    
+                    expect(subject.position).to(equal(p1))
+                }
+                
+                it("should set the position from x and y") {
+                    let p1 = CGPoint(x: 15, y: 20)
+                    
+                    subject.r2d_position(p1.x, y: p1.y)
+                    
+                    expect(subject.position).to(equal(p1))
+                }
             }
         }
     }

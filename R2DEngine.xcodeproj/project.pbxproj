@@ -18,6 +18,7 @@
 		893574971C4B6CC700689E43 /* R2DPlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */; };
 		893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */; };
 		8935749B1C4B70F200689E43 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */; };
+		894C65531CD9650E00D90268 /* R2DMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C65521CD9650E00D90268 /* R2DMessenger.swift */; };
 		89720DB61C52BA9D00307CD0 /* CGPoint+OperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB51C52BA9D00307CD0 /* CGPoint+OperatorTests.swift */; };
 		89720DB81C52BC5F00307CD0 /* CGVector+OperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB71C52BC5F00307CD0 /* CGVector+OperatorTests.swift */; };
 		89720DBA1C52BD5800307CD0 /* SKColor+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB91C52BD5800307CD0 /* SKColor+ExtensionTests.swift */; };
@@ -89,6 +90,7 @@
 		893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlayerComponent.swift; sourceTree = "<group>"; };
 		893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DAnchorPoint.swift; sourceTree = "<group>"; };
 		8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
+		894C65521CD9650E00D90268 /* R2DMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DMessenger.swift; sourceTree = "<group>"; };
 		89720DB51C52BA9D00307CD0 /* CGPoint+OperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+OperatorTests.swift"; sourceTree = "<group>"; };
 		89720DB71C52BC5F00307CD0 /* CGVector+OperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGVector+OperatorTests.swift"; sourceTree = "<group>"; };
 		89720DB91C52BD5800307CD0 /* SKColor+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKColor+ExtensionTests.swift"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */,
 				899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */,
 				899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */,
+				894C65521CD9650E00D90268 /* R2DMessenger.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				899C4E361C455BED00F77F68 /* R2DSpawnerComponent.swift in Sources */,
 				893574881C4B240700689E43 /* R2DGameCenterComponent.swift in Sources */,
 				893574821C4B1E3B00689E43 /* R2DGameManagerComponent.swift in Sources */,
+				894C65531CD9650E00D90268 /* R2DMessenger.swift in Sources */,
 				89F4E1961C40449D008EDD2A /* R2DBackground.swift in Sources */,
 				893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */,
 				89D9AA701C4EB12500CCB90B /* R2DAttackComponent.swift in Sources */,

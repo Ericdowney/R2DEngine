@@ -51,17 +51,17 @@ extension SKNode {
     
     // MARK: - Loop through Children
     
-    public func eachChild(@noescape loop: SKNode -> Void) -> Self {
+    public func r2d_eachChild(@noescape loop: SKNode -> Void) -> Self {
         children.forEach(loop)
         return self
     }
     
-    public func eachChildWithName(name: String, @noescape loop: SKNode -> Void) -> Self {
+    public func r2d_eachChildWithName(name: String, @noescape loop: SKNode -> Void) -> Self {
         children.filter { $0.name == name }.forEach(loop)
         return self
     }
     
-    public func eachChildContainsName(name: String, @noescape loop: SKNode -> Void) -> Self {
+    public func r2d_eachChildContainsName(name: String, @noescape loop: SKNode -> Void) -> Self {
         children.filter { $0.name?.containsString(name) ?? false }.forEach(loop)
         return self
     }
@@ -74,6 +74,11 @@ extension SKNode {
     }
     
     public func r2d_position(x: CGFloat, y: CGFloat) -> Self {
+        self.position = CGPoint(x: x, y: y)
+        return self
+    }
+    
+    public func r2d_positionPercent(x: CGFloat, y: CGFloat) -> Self {
         self.position = R2DUtils.getX(x, y: y)
         return self
     }

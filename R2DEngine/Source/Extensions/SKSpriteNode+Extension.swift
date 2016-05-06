@@ -21,7 +21,7 @@ public extension SKSpriteNode {
         }
     }
     
-    // MARK: - X
+    // MARK: X
     
     public var r2d_leftX: CGFloat {
         return self.position.x - (self.size.width * self.anchorPoint.x)
@@ -31,7 +31,7 @@ public extension SKSpriteNode {
         return self.position.x + self.size.width - (self.size.width * self.anchorPoint.x)
     }
     
-    // MARK: - Y
+    // MARK: Y
     
     public var r2d_topY: CGFloat {
         return self.position.y + self.size.height - (self.size.height * self.anchorPoint.y)
@@ -62,4 +62,22 @@ public extension SKSpriteNode {
         self.texture = SKTexture(imageNamed: imageNamed)
         return self
     }
+    
+    // MARK: - Physics
+    
+    func r2d_physicsBody(body: SKPhysicsBody) -> Self {
+        self.physicsBody = body
+        return self
+    }
+    
+    func r2d_physicsBodyFromSize(size: CGSize) -> Self {
+        self.physicsBody = SKPhysicsBody(rectangleOfSize: size)
+        return self
+    }
+
+    // TODO: Bring this back too when Swift bug is fixed.
+//    func r2d_physicsBodyFromTexture() -> Self {
+//        self.physicsBody = SKPhysicsBody(r2dRectangleOfSize: self.texture?.size())
+//        return self
+//    }
 }

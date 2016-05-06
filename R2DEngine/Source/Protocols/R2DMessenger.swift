@@ -12,13 +12,13 @@ public protocol R2DMessenger: class {
     func registerListener(key: String, handler: (Self, NSNotification) -> Void)
     func unregisterListener(key: String)
     func unregisterListeners()
-    func postOnKey(key: String, data: AnyObject)
+    func postOnKey(key: String, data: [String: AnyObject]?)
     func defaultCenter() -> NSNotificationCenter
 }
 
 public extension R2DMessenger {
     func registerListener(key: String, handler: (Self, NSNotification) -> Void) {
-        defaultCenter().addObserverForName(key, object: self, queue: NSOperationQueue.mainQueue()) {
+        defaultCenter().addObserverForName(key, object: nil, queue: NSOperationQueue.mainQueue()) {
             [unowned self] notification in
             handler(self, notification)
         }
@@ -32,8 +32,8 @@ public extension R2DMessenger {
         defaultCenter().removeObserver(self)
     }
     
-    func postOnKey(key: String, data: AnyObject) {
-        defaultCenter().postNotificationName(key, object: data)
+    func postOnKey(key: String, data: [String: AnyObject]? = nil) {
+        defaultCenter().postNotificationName(key, object: nil, userInfo: data)
     }
     
     func defaultCenter() -> NSNotificationCenter {

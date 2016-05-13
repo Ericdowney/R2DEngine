@@ -170,6 +170,22 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                     
                     expect(subject.texture?.size()).to(equal(img.size))
                 }
+                
+                it("should set the physics body from another SKPhysicsBody") {
+                    let body = SKPhysicsBody()
+                    
+                    subject.r2d_physicsBody(body)
+                    
+                    expect(subject.physicsBody).to(beIdenticalTo(body))
+                }
+                
+                it("should set the physics body from a size") {
+                    let size = CGSize(width: 10, height: 10)
+                    
+                    subject.r2d_physicsBodyFromSize(size)
+                    
+                    expect(subject.physicsBody).toNot(beNil())
+                }
             }
         }
     }

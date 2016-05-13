@@ -18,7 +18,7 @@ public protocol R2DPlayerProperties: class {
 }
 
 public protocol R2DPlayerDeathDelegateContainer {
-    var delegate: R2DPlayerDeathDelegate? { get set }
+    weak var delegate: R2DPlayerDeathDelegate? { get set }
 }
 
 public protocol R2DPlayerComponent {
@@ -36,7 +36,7 @@ public extension R2DPlayerComponent where Self: R2DPlayerProperties, Self: R2DPl
     }
 }
 
-public protocol R2DPlayerDeathDelegate {
+public protocol R2DPlayerDeathDelegate: class {
     /// Parameter name is "underscore" to allow user to fill in parameter name of their choosing
     func playerDied(_: R2DPlayer)
 }

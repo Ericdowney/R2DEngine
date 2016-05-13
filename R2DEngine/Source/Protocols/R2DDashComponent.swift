@@ -25,10 +25,13 @@ public extension R2DDashComponent where Self: R2DDashProperties, Self: SKSpriteN
     
     func dash() {
         self.runAction( SKAction.sequence([
-            SKAction.runBlock {
+            SKAction.runBlock { [unowned self] in
                 self.position += self.dashDelta
             },
-            SKAction.waitForDuration(1.0)
+            SKAction.waitForDuration(1.0),
+            SKAction.runBlock { [unowned self] in
+                self.onDash()
+            }
         ]) )
     }
 }

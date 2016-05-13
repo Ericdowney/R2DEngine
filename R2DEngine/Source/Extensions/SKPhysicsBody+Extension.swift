@@ -9,9 +9,8 @@
 import SpriteKit
 
 extension SKPhysicsBody {
-    // TODO: Bring this back when the Swift bug is fixed.
-//    convenience init?(r2dRectangleOfSize: CGSize?) {
-//        guard let size = r2dRectangleOfSize else { return nil }
-//        self.init(rectangleOfSize: size)
-//    }
+    convenience init?(r2dRectangleOfSize: CGSize?) {
+        guard let size = r2dRectangleOfSize else { return nil }
+        self.init(rectangleOfSize: size)
+    }
 }

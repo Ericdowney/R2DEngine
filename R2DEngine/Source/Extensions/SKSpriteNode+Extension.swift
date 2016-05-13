@@ -75,9 +75,8 @@ public extension SKSpriteNode {
         return self
     }
 
-    // TODO: Bring this back too when Swift bug is fixed.
-//    func r2d_physicsBodyFromTexture() -> Self {
-//        self.physicsBody = SKPhysicsBody(r2dRectangleOfSize: self.texture?.size())
-//        return self
-//    }
+    func r2d_physicsBodyFromTexture() -> Self {
+        self.physicsBody = SKPhysicsBody(r2dRectangleOfSize: self.texture?.size())
+        return self
+    }
 }

@@ -15,15 +15,23 @@ import Nimble
 class SKPhysicsBody_ExtensionTests: QuickSpec {
 
     override func spec() {
-//        describe("SKPhysicsBody_ExtensionTests") {
-//            
-//            it("should fail initialization if passed an invalid CGSize") {
-//                let badSize: CGSize? = nil
-//                
-//                let result: SKPhysicsBody? = SKPhysicsBody(r2dRectangleOfSize: badSize)
-//                
-//                expect(result).to(beNil())
-//            }
-//        }
+        describe("SKPhysicsBody_ExtensionTests") {
+            
+            it("should fail initialization when passed an invalid CGSize") {
+                let badSize: CGSize? = nil
+                
+                let result: SKPhysicsBody? = SKPhysicsBody(r2dRectangleOfSize: badSize)
+                
+                expect(result).to(beNil())
+            }
+            
+            it("should succeed initialization when passed a valid CGSize") {
+                let goodSize: CGSize? = CGSize(width: 10, height: 20)
+                
+                let result: SKPhysicsBody? = SKPhysicsBody(r2dRectangleOfSize: goodSize)
+                
+                expect(result).toNot(beNil())
+            }
+        }
     }
 }

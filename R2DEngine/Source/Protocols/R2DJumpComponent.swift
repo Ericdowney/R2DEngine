@@ -13,49 +13,54 @@ public protocol R2DJumpProperties: class {
     var jumpCount: Int { get set }
 }
 
-public protocol R2DDoubleJumpComponent {
+public protocol R2DJumpComponent {
+    func resetJump()
     func jump()
-    func resetJump()
 }
 
-public protocol R2DInfiniteJumpComponent {
-    var waitBetweenJump: NSTimeInterval { get }
-    func jumpForever()
-    func jumpWithImpluse(yImpluse: CGFloat)
-    func resetJump()
+public extension R2DJumpComponent where Self: R2DJumpProperties {
+    func resetJump() {
+        self.jumpCount = 0
+    }
 }
 
-public extension R2DDoubleJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
+public extension R2DJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
+    public func jump() {
+        self.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
+        self.jumpCount += 1
+    }
+}
+
+public protocol R2DMultiJumpComponent: R2DJumpComponent {
+    var numberOfJumps: Int { get set }
+}
+
+public extension R2DMultiJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
     func jump() {
-        if self.jumpCount < 2 {
+        if self.jumpCount < numberOfJumps {
             self.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
             self.jumpCount += 1
         }
     }
-    
-    func resetJump() {
-        self.jumpCount = 0
-    }
+}
+
+public protocol R2DInfiniteJumpComponent: R2DJumpComponent {
+    var waitBetweenJump: NSTimeInterval { get }
+    func jumpForever()
+    func jumpWithImpluse(yImpluse: CGFloat)
 }
 
 public extension R2DInfiniteJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
     func jumpForever() {
         self.runAction( SKAction.sequence([
             SKAction.waitForDuration(self.waitBetweenJump),
-            SKAction.runBlock {
+            SKAction.runBlock { [unowned self] in
                 self.jump()
             }
         ]) )
     }
-    
-    func jump() {
-        self.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
-        self.jumpCount += 1
-    }
-    
-    func resetJump() {
-        self.jumpCount = 0
-    }
 }
 
-public typealias R2DDoubleJump = protocol<R2DJumpProperties, R2DDoubleJumpComponent>
+public typealias R2DJump = protocol<R2DJumpProperties, R2DJumpComponent>
+public typealias R2DMultiJump = protocol<R2DJumpProperties, R2DMultiJumpComponent>
+public typealias R2DInfiniteJump = protocol<R2DJumpProperties, R2DInfiniteJumpComponent>

@@ -10,14 +10,17 @@ import SpriteKit
 
 public struct R2DUtils {
     
+    /// UIScreen - Main Screen - Size
     public static var screenSize: CGSize {
         return UIScreen.mainScreen().bounds.size
     }
     
+    /// UIScreen - Main Screen - Width
     public static var screenWidth: CGFloat {
         return UIScreen.mainScreen().bounds.size.width
     }
     
+    /// UIScreen - Main Screen - Height
     public static var screenHeight: CGFloat {
         return UIScreen.mainScreen().bounds.size.height
     }

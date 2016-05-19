@@ -12,6 +12,7 @@ extension SKNode {
     
     // MARK: - Properties
     
+    /// Getter/Setter - Tuple representation of position.
     public var r2dPosition: (x: CGFloat, y: CGFloat) {
         get {
             return ( self.position.x, self.position.y )
@@ -21,6 +22,7 @@ extension SKNode {
         }
     }
     
+    /// Getter/Setter - Tuple representation of position between 0 - 1.
     public var r2dPositionPercent: (x: CGFloat, y: CGFloat) {
         get {
             return ( self.position.x / R2DUtils.screenWidth, self.position.y / R2DUtils.screenHeight )
@@ -32,6 +34,11 @@ extension SKNode {
     
     // MARK: - Init
     
+    /**
+     Convenience Initializer with name
+     
+     - Parameter r2d_name: The name of the node
+     */
     public convenience init(r2d_name: String) {
         self.init()
         self.name = r2d_name
@@ -39,11 +46,25 @@ extension SKNode {
     
     // MARK: - Add Children
     
+    /**
+     Adds a variable number of SKNodes as children
+     
+     - Parameter nodes: The list of nodes, expressed variadically, to add as children.
+     
+     - Returns: Self
+     */
     public func r2d_addChildren(nodes: SKNode...) -> Self {
         nodes.forEach { self.addChild($0) }
         return self
     }
     
+    /**
+     Adds a variable number of SKNodes as children
+     
+     - Parameter nodes: The list of nodes, expressed as an Array, to add as children.
+     
+     - Returns: Self
+     */
     public func r2d_addChildren(nodes: [SKNode]) -> Self {
         nodes.forEach { self.addChild($0) }
         return self
@@ -51,16 +72,39 @@ extension SKNode {
     
     // MARK: - Loop through Children
     
+    /**
+     Calls the loop closure for each child, passing each child into the closure
+     
+     - Parameter loop: The closure for each child.
+     
+     - Returns: Self
+     */
     public func r2d_eachChild(@noescape loop: SKNode -> Void) -> Self {
         children.forEach(loop)
         return self
     }
     
+    /**
+     Calls the loop closure for each child with the specified name, passing each child into the closure
+     
+     - Parameter name: The name to filter the children of this node before running the loop closure.
+     - Parameter loop: The closure for each child.
+     
+     - Returns: Self
+     */
     public func r2d_eachChildWithName(name: String, @noescape loop: SKNode -> Void) -> Self {
         children.filter { $0.name == name }.forEach(loop)
         return self
     }
     
+    /**
+     Calls the loop closure for each child that name contains, passing each child into the closure
+     
+     - Parameter name: The name to filter the children of this node before running the loop closure.
+     - Parameter loop: The closure for each child.
+     
+     - Returns: Self
+     */
     public func r2d_eachChildContainsName(name: String, @noescape loop: SKNode -> Void) -> Self {
         children.filter { $0.name?.containsString(name) ?? false }.forEach(loop)
         return self
@@ -68,21 +112,51 @@ extension SKNode {
     
     // MARK: - Setters
     
+    /**
+     Chainable - Setter for this node's position property
+     
+     - Parameter position: The CGPoint used to set the position of this node.
+     
+     - Returns: Self
+     */
     public func r2d_position(position: CGPoint) -> Self {
         self.position = position
         return self
     }
     
+    /**
+     Chainable - Setter for this node's position property
+     
+     - Parameter x: The CGFloat value used to set the x coordinate of this node's position
+     - Parameter y: The CGFloat value used to set the y coordinate of this node's position
+     
+     - Returns: Self
+     */
     public func r2d_position(x: CGFloat, y: CGFloat) -> Self {
         self.position = CGPoint(x: x, y: y)
         return self
     }
     
+    /**
+     Chainable - Setter for this node's position property in percentage (0 - 1)
+     
+     - Parameter x: The CGFloat value between 0 - 1, used to set the x coordinate of this node's position
+     - Parameter y: The CGFloat value between 0 - 1, used to set the y coordinate of this node's position
+     
+     - Returns: Self
+     */
     public func r2d_positionPercent(x: CGFloat, y: CGFloat) -> Self {
         self.position = R2DUtils.getX(x, y: y)
         return self
     }
     
+    /**
+     Chainable - Used to add an individual SKNode as a child of this node
+     
+     - Parameter node: The SKNode to add as a child of this node.
+     
+     - Returns: Self
+     */
     public func r2d_addToNode(node: SKNode) -> Self {
         node.addChild(self)
         return self

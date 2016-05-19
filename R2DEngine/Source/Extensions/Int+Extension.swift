@@ -9,9 +9,14 @@
 import Foundation
 
 public extension Int {
-    func r2d_times(@noescape action: Void -> Void) {
+    /**
+     Ruby-esk loop.
+     
+     - Parameter loop: The closure used to loop n times
+     */
+    func r2d_times(@noescape loop: Void -> Void) {
         for _ in 0..<self {
-            action()
+            loop()
         }
     }
 }

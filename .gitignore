@@ -1,2 +1,5 @@
 Carthage/
 Cartfile.private
+build/
+docs/
+R2DEngine.xcodeproj/xcuserdata/edowney.xcuserdatad/xcdebugger/

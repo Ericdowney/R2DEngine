@@ -8,6 +8,7 @@
 
 import SpriteKit
 
+/// A Collection of static functions to help interact with the UIScreen.mainScreen() and Coordinate System
 public struct R2DUtils {
     
     /// UIScreen - Main Screen - Size

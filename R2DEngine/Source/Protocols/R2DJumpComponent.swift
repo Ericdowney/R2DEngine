@@ -47,7 +47,6 @@ public extension R2DMultiJumpComponent where Self: R2DJumpProperties, Self: SKSp
 public protocol R2DInfiniteJumpComponent: R2DJumpComponent {
     var waitBetweenJump: NSTimeInterval { get }
     func jumpForever()
-    func jumpWithImpluse(yImpluse: CGFloat)
 }
 
 public extension R2DInfiniteJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {

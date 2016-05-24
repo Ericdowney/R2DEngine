@@ -51,12 +51,14 @@ public protocol R2DInfiniteJumpComponent: R2DJumpComponent {
 
 public extension R2DInfiniteJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
     func jumpForever() {
-        self.runAction( SKAction.sequence([
-            SKAction.waitForDuration(self.waitBetweenJump),
-            SKAction.runBlock { [unowned self] in
-                self.jump()
-            }
-        ]) )
+        self.runAction(SKAction.repeatActionForever(
+            SKAction.sequence([
+                SKAction.waitForDuration(self.waitBetweenJump),
+                SKAction.runBlock { [unowned self] in
+                    self.jump()
+                }
+            ])
+        ))
     }
 }
 

@@ -22,6 +22,12 @@ class R2DSpawnerComponentTests: QuickSpec {
         var spawnNodes: R2DSpawnerFunc = { _, _ in [] }
         var seed: Int = 1
         
+        func spawnAction() {
+            
+        }
+        func startSpawning() {
+            
+        }
         func updateSpawnNodes(currentTime: CFTimeInterval) {
             
         }

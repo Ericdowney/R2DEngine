@@ -3,3 +3,5 @@ Cartfile.private
 build/
 docs/
 R2DEngine.xcodeproj/xcuserdata/edowney.xcuserdatad/xcdebugger/
+.DS_Store
+R2DEngine.xcodeproj/project.xcworkspace/xcuserdata/

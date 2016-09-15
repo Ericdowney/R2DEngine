@@ -21,14 +21,14 @@ class R2DPlayerComponentTests: QuickSpec {
         
         weak var delegate: R2DPlayerDeathDelegate? = nil
         
-        func updatePlayer(currentTime: CFTimeInterval) {}
+        func updatePlayer(_ currentTime: CFTimeInterval) {}
         func resetPlayer() {}
     }
     
     class DeathDelegate: R2DPlayerDeathDelegate {
         var died = false
         weak var player: R2DPlayer? = nil
-        func playerDied(thePlayer: R2DPlayer) {
+        func playerDied(_ thePlayer: R2DPlayer) {
             died = true
             player = thePlayer
         }

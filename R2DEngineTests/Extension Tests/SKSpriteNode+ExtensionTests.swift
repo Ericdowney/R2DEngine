@@ -21,31 +21,31 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                 it("should set anchor point based on enum value") {
                     let subject = SKSpriteNode()
                     
-                    subject.r2dAnchor = .BottomLeft
+                    subject.r2dAnchor = .bottomLeft
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 0.0, y: 0.0) ))
                     
-                    subject.r2dAnchor = .BottomRight
+                    subject.r2dAnchor = .bottomRight
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 1.0, y: 0.0) ))
                     
-                    subject.r2dAnchor = .TopLeft
+                    subject.r2dAnchor = .topLeft
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 0.0, y: 1.0) ))
                     
-                    subject.r2dAnchor = .TopRight
+                    subject.r2dAnchor = .topRight
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 1.0, y: 1.0) ))
                     
-                    subject.r2dAnchor = .Center
+                    subject.r2dAnchor = .center
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 0.5, y: 0.5) ))
                     
-                    subject.r2dAnchor = .Right
+                    subject.r2dAnchor = .right
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 1.0, y: 0.5) ))
                     
-                    subject.r2dAnchor = .Left
+                    subject.r2dAnchor = .left
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 0.0, y: 0.5) ))
                     
-                    subject.r2dAnchor = .Top
+                    subject.r2dAnchor = .top
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 0.5, y: 1.0) ))
                     
-                    subject.r2dAnchor = .Bottom
+                    subject.r2dAnchor = .bottom
                     expect(subject.anchorPoint).to(equal( CGPoint(x: 0.5, y: 0.0) ))
                 }
             }
@@ -53,7 +53,7 @@ class SKSpriteNodeExtensionTests: QuickSpec {
             describe("Left/Right/Top/Bottom") {
                 it("should calculate lhs x value based on the anchor point") {
                     let container = SKNode()
-                    let subject = SKSpriteNode(texture: nil, color: .clearColor(), size: CGSize(width: 10, height: 10))
+                    let subject = SKSpriteNode(texture: nil, color: .clear(), size: CGSize(width: 10, height: 10))
                     subject.position = CGPoint(x: 100, y: 100)
                     container.addChild(subject)
                     
@@ -61,13 +61,13 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                     
                     expect(result1).to(equal( 95 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Left.value
+                    subject.anchorPoint = R2DAnchorPoint.left.value
                     
                     let result2 = subject.r2d_leftX
                     
                     expect(result2).to(equal( 100 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Right.value
+                    subject.anchorPoint = R2DAnchorPoint.right.value
                     
                     let result3 = subject.r2d_leftX
                     
@@ -76,7 +76,7 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                 
                 it("should calculate rhs x value") {
                     let container = SKNode()
-                    let subject = SKSpriteNode(texture: nil, color: .clearColor(), size: CGSize(width: 10, height: 10))
+                    let subject = SKSpriteNode(texture: nil, color: .clear(), size: CGSize(width: 10, height: 10))
                     subject.position = CGPoint(x: 100, y: 100)
                     container.addChild(subject)
                     
@@ -84,13 +84,13 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                     
                     expect(result1).to(equal( 105 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Left.value
+                    subject.anchorPoint = R2DAnchorPoint.left.value
                     
                     let result2 = subject.r2d_rightX
                     
                     expect(result2).to(equal( 110 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Right.value
+                    subject.anchorPoint = R2DAnchorPoint.right.value
                     
                     let result3 = subject.r2d_rightX
                     
@@ -99,7 +99,7 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                 
                 it("should calculate top y value") {
                     let container = SKNode()
-                    let subject = SKSpriteNode(texture: nil, color: .clearColor(), size: CGSize(width: 10, height: 10))
+                    let subject = SKSpriteNode(texture: nil, color: .clear(), size: CGSize(width: 10, height: 10))
                     subject.position = CGPoint(x: 100, y: 100)
                     container.addChild(subject)
                     
@@ -107,13 +107,13 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                     
                     expect(result1).to(equal( 105 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Bottom.value
+                    subject.anchorPoint = R2DAnchorPoint.bottom.value
                     
                     let result2 = subject.r2d_topY
                     
                     expect(result2).to(equal( 110 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Top.value
+                    subject.anchorPoint = R2DAnchorPoint.top.value
                     
                     let result3 = subject.r2d_topY
                     
@@ -122,7 +122,7 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                 
                 it("should calculate bottom y value") {
                     let container = SKNode()
-                    let subject = SKSpriteNode(texture: nil, color: .clearColor(), size: CGSize(width: 10, height: 10))
+                    let subject = SKSpriteNode(texture: nil, color: .clear(), size: CGSize(width: 10, height: 10))
                     subject.position = CGPoint(x: 100, y: 100)
                     container.addChild(subject)
                     
@@ -130,13 +130,13 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                     
                     expect(result1).to(equal( 95 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Bottom.value
+                    subject.anchorPoint = R2DAnchorPoint.bottom.value
                     
                     let result2 = subject.r2d_bottomY
                     
                     expect(result2).to(equal( 100 ))
                     
-                    subject.anchorPoint = R2DAnchorPoint.Top.value
+                    subject.anchorPoint = R2DAnchorPoint.top.value
                     
                     let result3 = subject.r2d_bottomY
                     
@@ -152,13 +152,13 @@ class SKSpriteNodeExtensionTests: QuickSpec {
                 }
                 
                 it("should set the color") {
-                    subject.r2d_color(.redColor())
+                    subject.r2d_color(.red())
                     
-                    expect(subject.color).to(equal(SKColor.redColor()))
+                    expect(subject.color).to(equal(SKColor.red))
                 }
                 
                 it("should set the anchor") {
-                    subject.r2d_anchor(.BottomLeft)
+                    subject.r2d_anchor(.bottomLeft)
                     
                     expect(subject.anchorPoint).to(equal(CGPoint(x: 0.0, y: 0.0)))
                 }

@@ -14,10 +14,10 @@ import Nimble
 
 class R2DSpawnerComponentTests: QuickSpec {
     
-    private class Spawner: R2DSpawner {
-        var minimumSpawnTime: NSTimeInterval = 0.0
-        var maximumSpawnTime: NSTimeInterval = 1.0
-        var spawnType: R2DSpawnerType = .Cos
+    fileprivate class Spawner: R2DSpawner {
+        var minimumSpawnTime: TimeInterval = 0.0
+        var maximumSpawnTime: TimeInterval = 1.0
+        var spawnType: R2DSpawnerType = .cos
         
         var spawnNodes: R2DSpawnerFunc = { _, _ in [] }
         var seed: Int = 1
@@ -28,7 +28,7 @@ class R2DSpawnerComponentTests: QuickSpec {
         func startSpawning() {
             
         }
-        func updateSpawnNodes(currentTime: CFTimeInterval) {
+        func updateSpawnNodes(_ currentTime: CFTimeInterval) {
             
         }
         func stopSpawning() {
@@ -50,7 +50,7 @@ class R2DSpawnerComponentTests: QuickSpec {
             
             it("should increment seed and spawn nodes") {
                 class LocalScrolling: SKNode, R2DScrolling {
-                    var scrollDirection: R2DDirection = .Left
+                    var scrollDirection: R2DDirection = .left
                     var scrollSpeed: CGFloat = 1.0
                 }
                 var spawned = false

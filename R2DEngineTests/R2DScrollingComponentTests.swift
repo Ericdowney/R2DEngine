@@ -14,8 +14,8 @@ import Nimble
 
 class R2DScrollingComponentTests: QuickSpec {
     
-    private class ScrollingNode: SKNode, R2DScrolling {
-        var scrollDirection: R2DDirection = .Left
+    fileprivate class ScrollingNode: SKNode, R2DScrolling {
+        var scrollDirection: R2DDirection = .left
         var scrollSpeed: CGFloat = 2.0
     }
     

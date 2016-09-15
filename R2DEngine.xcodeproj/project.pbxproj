@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8914EF0C1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914EF0B1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift */; };
 		892CD90E1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892CD90D1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift */; };
-		893259851CDC186E0061A595 /* R2DMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259841CDC186E0061A595 /* R2DMessengerTests.swift */; };
 		893259871CDCD9BE0061A595 /* R2DPlayerComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259861CDCD9BE0061A595 /* R2DPlayerComponentTests.swift */; };
 		893259891CDCDDB40061A595 /* R2DJumpComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893259881CDCDDB40061A595 /* R2DJumpComponentTests.swift */; };
 		8935747E1C4ACBC300689E43 /* R2DHudComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */; };
@@ -21,7 +20,6 @@
 		893574971C4B6CC700689E43 /* R2DPlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */; };
 		893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */; };
 		8935749B1C4B70F200689E43 /* SKSpriteNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */; };
-		894C65531CD9650E00D90268 /* R2DMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C65521CD9650E00D90268 /* R2DMessenger.swift */; };
 		894C65591CDB8A7300D90268 /* SKPhysicsBody+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C65581CDB8A7300D90268 /* SKPhysicsBody+Extension.swift */; };
 		894C655B1CDC162100D90268 /* SKPhysicsBody+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C655A1CDC162100D90268 /* SKPhysicsBody+ExtensionTests.swift */; };
 		89720DB61C52BA9D00307CD0 /* CGPoint+OperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89720DB51C52BA9D00307CD0 /* CGPoint+OperatorTests.swift */; };
@@ -83,7 +81,6 @@
 /* Begin PBXFileReference section */
 		8914EF0B1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DSpawnerComponentTests.swift; path = R2DEngineTests/R2DSpawnerComponentTests.swift; sourceTree = SOURCE_ROOT; };
 		892CD90D1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DScrollingComponentTests.swift; path = R2DEngineTests/R2DScrollingComponentTests.swift; sourceTree = SOURCE_ROOT; };
-		893259841CDC186E0061A595 /* R2DMessengerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DMessengerTests.swift; path = "R2DEngineTests/Extension Tests/R2DMessengerTests.swift"; sourceTree = SOURCE_ROOT; };
 		893259861CDCD9BE0061A595 /* R2DPlayerComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DPlayerComponentTests.swift; path = "R2DEngineTests/Extension Tests/R2DPlayerComponentTests.swift"; sourceTree = SOURCE_ROOT; };
 		893259881CDCDDB40061A595 /* R2DJumpComponentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R2DJumpComponentTests.swift; path = "R2DEngineTests/Extension Tests/R2DJumpComponentTests.swift"; sourceTree = SOURCE_ROOT; };
 		8935747D1C4ACBC300689E43 /* R2DHudComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DHudComponent.swift; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DPlayerComponent.swift; sourceTree = "<group>"; };
 		893574981C4B6F7A00689E43 /* R2DAnchorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DAnchorPoint.swift; sourceTree = "<group>"; };
 		8935749A1C4B70F200689E43 /* SKSpriteNode+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+Extension.swift"; sourceTree = "<group>"; };
-		894C65521CD9650E00D90268 /* R2DMessenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R2DMessenger.swift; sourceTree = "<group>"; };
 		894C65581CDB8A7300D90268 /* SKPhysicsBody+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+Extension.swift"; sourceTree = "<group>"; };
 		894C655A1CDC162100D90268 /* SKPhysicsBody+ExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKPhysicsBody+ExtensionTests.swift"; sourceTree = "<group>"; };
 		89720DB51C52BA9D00307CD0 /* CGPoint+OperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+OperatorTests.swift"; sourceTree = "<group>"; };
@@ -167,7 +163,6 @@
 				893574961C4B6CC700689E43 /* R2DPlayerComponent.swift */,
 				899C4E631C473A9200F77F68 /* R2DScrollingComponent.swift */,
 				899C4E351C455BED00F77F68 /* R2DSpawnerComponent.swift */,
-				894C65521CD9650E00D90268 /* R2DMessenger.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -211,7 +206,6 @@
 				89948A861CB2CF2400733069 /* R2DAttackComponentTests.swift */,
 				892CD90D1CC1B9E1000B4654 /* R2DScrollingComponentTests.swift */,
 				8914EF0B1CBF22BA00F05D6C /* R2DSpawnerComponentTests.swift */,
-				893259841CDC186E0061A595 /* R2DMessengerTests.swift */,
 				893259861CDCD9BE0061A595 /* R2DPlayerComponentTests.swift */,
 				893259881CDCDDB40061A595 /* R2DJumpComponentTests.swift */,
 			);
@@ -359,16 +353,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Eric Downey";
 				TargetAttributes = {
 					89F4E17A1C404488008EDD2A = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = Z46KU7GJC9;
+						LastSwiftMigration = 0800;
 					};
 					89F4E1841C404488008EDD2A = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = Z46KU7GJC9;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -421,7 +417,6 @@
 				899C4E361C455BED00F77F68 /* R2DSpawnerComponent.swift in Sources */,
 				893574881C4B240700689E43 /* R2DGameCenterComponent.swift in Sources */,
 				893574821C4B1E3B00689E43 /* R2DGameManagerComponent.swift in Sources */,
-				894C65531CD9650E00D90268 /* R2DMessenger.swift in Sources */,
 				893574991C4B6F7A00689E43 /* R2DAnchorPoint.swift in Sources */,
 				89D9AA701C4EB12500CCB90B /* R2DAttackComponent.swift in Sources */,
 				893574801C4ACBD800689E43 /* R2DHudManagerComponent.swift in Sources */,
@@ -456,7 +451,6 @@
 				89B906091C52A1F700138743 /* SKNode+ExtensionTests.swift in Sources */,
 				893259891CDCDDB40061A595 /* R2DJumpComponentTests.swift in Sources */,
 				89948A871CB2CF2400733069 /* R2DAttackComponentTests.swift in Sources */,
-				893259851CDC186E0061A595 /* R2DMessengerTests.swift in Sources */,
 				89720DB81C52BC5F00307CD0 /* CGVector+OperatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,8 +479,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -533,8 +529,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -554,6 +552,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -565,6 +564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -580,6 +580,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -587,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -601,6 +603,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Downey.R2DEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -615,6 +618,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Downey.R2DEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -629,6 +633,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Downey.R2DEngineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

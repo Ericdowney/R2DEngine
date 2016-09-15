@@ -21,9 +21,9 @@ class SKColorExtensionTests: QuickSpec {
                 let subject2 = SKColor.r2d_colorWithRed(0.0, green: 255.0, blue: 0.0, alpha: 1.0)
                 let subject3 = SKColor.r2d_colorWithRed(0.0, green: 0.0, blue: 255.0, alpha: 1.0)
                 
-                expect(subject1).to(equal( SKColor.redColor() ))
-                expect(subject2).to(equal( SKColor.greenColor() ))
-                expect(subject3).to(equal( SKColor.blueColor() ))
+                expect(subject1).to(equal( SKColor.red ))
+                expect(subject2).to(equal( SKColor.green ))
+                expect(subject3).to(equal( SKColor.blue ))
             }
             
             it("should invert the current color") {
@@ -31,7 +31,7 @@ class SKColorExtensionTests: QuickSpec {
                 
                 let result = subject.r2dInverseColor
                 
-                expect(result).to(equal(SKColor.redColor()))
+                expect(result).to(equal(SKColor.red))
             }
         }
     }

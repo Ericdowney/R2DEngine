@@ -11,40 +11,40 @@ import Foundation
 /// Enum - Used to set Sprite Node anchor point
 public enum R2DAnchorPoint {
     /// CGPoint - (x: 0.5, y: 0.5)
-    case Center
+    case center
     /// CGPoint - (x: 0.0, y: 0.5)
-    case Left
+    case left
     /// CGPoint - (x: 1.0, y: 0.5)
-    case Right
+    case right
     /// CGPoint - (x: 0.5, y: 1.0)
-    case Top
+    case top
     /// CGPoint - (x: 0.5, y: 0.0)
-    case Bottom
+    case bottom
     /// CGPoint - (x: 0.0, y: 0.0)
-    case BottomLeft
+    case bottomLeft
     /// CGPoint - (x: 1.0, y: 0.0)
-    case BottomRight
+    case bottomRight
     /// CGPoint - (x: 0.0, y: 1.0)
-    case TopLeft
+    case topLeft
     /// CGPoint - (x: 1.0, y: 1.0)
-    case TopRight
+    case topRight
     /// CGPoint - CGPointZero
-    case None
+    case none
     
     /// Get R2DAnchorPoint enum value as a CGPoint
     public var value: CGPoint {
         switch self {
-        case Center: return CGPoint(x: 0.5, y: 0.5)
-        case Left: return CGPoint(x: 0.0, y: 0.5)
-        case Right: return CGPoint(x: 1.0, y: 0.5)
-        case Top: return CGPoint(x: 0.5, y: 1.0)
-        case Bottom: return CGPoint(x: 0.5, y: 0.0)
-        case BottomLeft: return CGPoint(x: 0.0, y: 0.0)
-        case BottomRight: return CGPoint(x: 1.0, y: 0.0)
-        case TopLeft: return CGPoint(x: 0.0, y: 1.0)
-        case TopRight: return CGPoint(x: 1.0, y: 1.0)
+        case .center: return CGPoint(x: 0.5, y: 0.5)
+        case .left: return CGPoint(x: 0.0, y: 0.5)
+        case .right: return CGPoint(x: 1.0, y: 0.5)
+        case .top: return CGPoint(x: 0.5, y: 1.0)
+        case .bottom: return CGPoint(x: 0.5, y: 0.0)
+        case .bottomLeft: return CGPoint(x: 0.0, y: 0.0)
+        case .bottomRight: return CGPoint(x: 1.0, y: 0.0)
+        case .topLeft: return CGPoint(x: 0.0, y: 1.0)
+        case .topRight: return CGPoint(x: 1.0, y: 1.0)
         default:
-            return CGPointZero
+            return .zero
         }
     }
     
@@ -55,28 +55,28 @@ public enum R2DAnchorPoint {
      
      - Returns: Self
      */
-    public static func fromCGPoint(point: CGPoint) -> R2DAnchorPoint {
+    public static func fromCGPoint(_ point: CGPoint) -> R2DAnchorPoint {
         switch point {
         case CGPoint(x: 0.5, y: 0.5):
-            return .Center
+            return .center
         case CGPoint(x: 0.0, y: 0.5):
-            return .Left
+            return .left
         case CGPoint(x: 1.0, y: 0.5):
-            return .Right
+            return .right
         case CGPoint(x: 0.5, y: 1.0):
-            return .Top
+            return .top
         case CGPoint(x: 0.5, y: 0.0):
-            return .Bottom
+            return .bottom
         case CGPoint(x: 0.0, y: 0.0):
-            return .BottomLeft
+            return .bottomLeft
         case CGPoint(x: 1.0, y: 0.0):
-            return .BottomRight
+            return .bottomRight
         case CGPoint(x: 0.0, y: 1.0):
-            return .TopLeft
+            return .topLeft
         case CGPoint(x: 1.0, y: 1.0):
-            return .TopRight
+            return .topRight
         default:
-            return .None
+            return .none
         }
     }
 }

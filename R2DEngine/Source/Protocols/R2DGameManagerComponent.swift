@@ -28,23 +28,23 @@ public protocol R2DGameManagerComponent: SKPhysicsContactDelegate {
 
 public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, Self: SKScene {
     func resumeGame() {
-        self.paused = false
-        self.hudManager.switchToHud(self.gameHudName)
+        isPaused = false
+        hudManager.switchToHud(gameHudName)
     }
     
     func pauseGame() {
-        self.paused = true
-        self.hudManager.switchToHud(self.pauseHudName)
+        isPaused = true
+        hudManager.switchToHud(pauseHudName)
     }
     
     func gameOver() {
-        self.paused = true
-        self.hudManager.switchToHud(self.gameOverHudName)
+        isPaused = true
+        hudManager.switchToHud(gameOverHudName)
     }
     
     func setupPhysicsWorld() {
-        self.physicsWorld.gravity = CGVectorMake(0,-9.8)
-        self.physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector(dx: 0,dy: -9.8)
+        physicsWorld.contactDelegate = self
     }
     
     /**
@@ -52,14 +52,14 @@ public extension R2DGameManagerComponent where Self: R2DGameManagerProperties, S
         - didBeginContact
      Delegate methods can not have default values from Protocol Extensions.
      **/
-    func beginPhysicsContact(contact: SKPhysicsContact) {
+    func beginPhysicsContact(_ contact: SKPhysicsContact) {
         if let gameComponent = contact.bodyA.node as? R2DGameComponent {
-            gameComponent.updateCollision(contact, gameManager: self)
+            gameComponent.updateCollision(with: contact, andGameManager: self)
         }
         if let gameComponent = contact.bodyB.node as? R2DGameComponent {
-            gameComponent.updateCollision(contact, gameManager: self)
+            gameComponent.updateCollision(with: contact, andGameManager: self)
         }
     }
 }
 
-public typealias R2DGameManager = protocol<R2DGameManagerProperties, R2DGameManagerComponent>
+public typealias R2DGameManager = R2DGameManagerProperties & R2DGameManagerComponent

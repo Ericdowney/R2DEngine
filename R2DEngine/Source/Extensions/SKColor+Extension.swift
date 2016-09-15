@@ -16,7 +16,7 @@ import SpriteKit
  - color with modified brightness
  */
 public extension SKColor {
-    public class func r2d_colorWithRed(r: CGFloat, green g: CGFloat, blue b: CGFloat, alpha a: CGFloat) -> SKColor {
+    public class func r2d_colorWithRed(_ r: CGFloat, green g: CGFloat, blue b: CGFloat, alpha a: CGFloat) -> SKColor {
         return SKColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
     }
     
@@ -28,7 +28,7 @@ public extension SKColor {
      
      :returns: an SKColor instance that represent the required color
      */
-    public class func r2d_colorWithRGB(rgbValue : UInt, alpha : CGFloat = 1.0) -> SKColor {
+    public class func r2d_colorWithRGB(_ rgbValue : UInt, alpha : CGFloat = 1.0) -> SKColor {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16) / 255
         let green = CGFloat((rgbValue & 0xFF00) >> 8) / 255
         let blue = CGFloat(rgbValue & 0xFF) / 255
@@ -42,7 +42,7 @@ public extension SKColor {
      :param: lighting percent percentage
      :returns: lighter SKColor
      */
-    public func r2d_lighterColor(percent : Double) -> SKColor {
+    public func r2d_lighterColor(_ percent : Double) -> SKColor {
         return r2d_colorWithBrightnessFactor(CGFloat(1 + percent));
     }
     
@@ -52,7 +52,7 @@ public extension SKColor {
      :param: darking percent percentage
      :returns: darker SKColor
      */
-    public func r2d_darkerColor(percent : Double) -> SKColor {
+    public func r2d_darkerColor(_ percent : Double) -> SKColor {
         return r2d_colorWithBrightnessFactor(CGFloat(1 - percent));
     }
     
@@ -62,7 +62,7 @@ public extension SKColor {
      :param: factor brightness factor
      :returns: modified color
      */
-    public func r2d_colorWithBrightnessFactor(factor: CGFloat) -> SKColor {
+    public func r2d_colorWithBrightnessFactor(_ factor: CGFloat) -> SKColor {
         var hue : CGFloat = 0
         var saturation : CGFloat = 0
         var brightness : CGFloat = 0
@@ -76,8 +76,8 @@ public extension SKColor {
     }
     
     public var r2dInverseColor: SKColor {
-        let components = CGColorGetComponents(self.CGColor)
+        let components = self.cgColor.components
         
-        return SKColor(red: 1.0 - components[0], green: 1.0 - components[1], blue: 1.0 - components[2], alpha: components[3])
+        return SKColor(red: 1.0 - components![0], green: 1.0 - components![1], blue: 1.0 - components![2], alpha: components![3])
     }
 }

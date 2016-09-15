@@ -20,14 +20,14 @@ public protocol R2DJumpComponent {
 
 public extension R2DJumpComponent where Self: R2DJumpProperties {
     func resetJump() {
-        self.jumpCount = 0
+        jumpCount = 0
     }
 }
 
 public extension R2DJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
     public func jump() {
-        self.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
-        self.jumpCount += 1
+        physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
+        jumpCount += 1
     }
 }
 
@@ -37,31 +37,29 @@ public protocol R2DMultiJumpComponent: R2DJumpComponent {
 
 public extension R2DMultiJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
     func jump() {
-        if self.jumpCount < numberOfJumps {
-            self.physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
-            self.jumpCount += 1
+        if jumpCount < numberOfJumps {
+            physicsBody?.applyImpulse(CGVector(dx: 0.0, dy: jumpImpluse))
+            jumpCount += 1
         }
     }
 }
 
 public protocol R2DInfiniteJumpComponent: R2DJumpComponent {
-    var waitBetweenJump: NSTimeInterval { get }
+    var waitBetweenJump: TimeInterval { get }
     func jumpForever()
 }
 
 public extension R2DInfiniteJumpComponent where Self: R2DJumpProperties, Self: SKSpriteNode {
     func jumpForever() {
-        self.runAction(SKAction.repeatActionForever(
+        run(SKAction.repeatForever(
             SKAction.sequence([
-                SKAction.waitForDuration(self.waitBetweenJump),
-                SKAction.runBlock { [unowned self] in
-                    self.jump()
-                }
+                SKAction.wait(forDuration: waitBetweenJump),
+                SKAction.run(jump)
             ])
         ))
     }
 }
 
-public typealias R2DJump = protocol<R2DJumpProperties, R2DJumpComponent>
-public typealias R2DMultiJump = protocol<R2DJumpProperties, R2DMultiJumpComponent>
-public typealias R2DInfiniteJump = protocol<R2DJumpProperties, R2DInfiniteJumpComponent>
+public typealias R2DJump = R2DJumpProperties & R2DJumpComponent
+public typealias R2DMultiJump = R2DJumpProperties & R2DMultiJumpComponent
+public typealias R2DInfiniteJump = R2DJumpProperties & R2DInfiniteJumpComponent

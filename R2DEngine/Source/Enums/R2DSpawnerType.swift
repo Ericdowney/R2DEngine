@@ -9,7 +9,7 @@
 import Foundation
 
 public enum R2DSpawnerType: CGFloat {
-    case Tan
-    case Cos
-    case Sin
+    case tan
+    case cos
+    case sin
 }

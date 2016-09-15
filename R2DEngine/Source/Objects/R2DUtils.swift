@@ -13,31 +13,31 @@ public struct R2DUtils {
     
     /// UIScreen - Main Screen - Size
     public static var screenSize: CGSize {
-        return UIScreen.mainScreen().bounds.size
+        return UIScreen.main.bounds.size
     }
     
     /// UIScreen - Main Screen - Width
     public static var screenWidth: CGFloat {
-        return UIScreen.mainScreen().bounds.size.width
+        return UIScreen.main.bounds.size.width
     }
     
     /// UIScreen - Main Screen - Height
     public static var screenHeight: CGFloat {
-        return UIScreen.mainScreen().bounds.size.height
+        return UIScreen.main.bounds.size.height
     }
     
     /// Get CGPoint based on percentage of screen x: 0 - 1.0, y: 0 - 1.0
-    public static func getX(x: CGFloat, y: CGFloat) -> CGPoint {
+    public static func getX(_ x: CGFloat, y: CGFloat) -> CGPoint {
         return CGPoint(x: R2DUtils.screenSize.width * x, y: R2DUtils.screenSize.height * y)
     }
     
     /// Get CGFloat based on percentage of screen x: 0 - 1.0
-    public static func getX(x: CGFloat) -> CGFloat {
+    public static func getX(_ x: CGFloat) -> CGFloat {
         return R2DUtils.screenWidth * x
     }
     
     /// Get CGFloat based on percentage of screen y: 0 - 1.0
-    public static func getY(y: CGFloat) -> CGFloat {
+    public static func getY(_ y: CGFloat) -> CGFloat {
         return R2DUtils.screenHeight * y
     }
 }

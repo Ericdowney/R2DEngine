@@ -14,7 +14,7 @@ public extension Int {
      
      - Parameter loop: The closure used to loop n times
      */
-    func r2d_times(@noescape loop: Void -> Void) {
+    func r2d_times(_ loop: (Void) -> Void) {
         for _ in 0..<self {
             loop()
         }

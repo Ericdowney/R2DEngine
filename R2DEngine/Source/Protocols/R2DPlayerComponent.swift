@@ -22,16 +22,16 @@ public protocol R2DPlayerDeathDelegateContainer {
 }
 
 public protocol R2DPlayerComponent {
-    func updatePlayer(currentTime: CFTimeInterval)
+    func updatePlayer(_ currentTime: CFTimeInterval)
     func resetPlayer()
     func hurtPlayer()
 }
 
 public extension R2DPlayerComponent where Self: R2DPlayerProperties, Self: R2DPlayerDeathDelegateContainer {
     func hurtPlayer() {
-        self.health -= 1
-        if self.health <= 0 {
-            self.delegate?.playerDied(self)
+        health -= 1
+        if health <= 0 {
+            delegate?.playerDied(self)
         }
     }
 }
@@ -41,4 +41,4 @@ public protocol R2DPlayerDeathDelegate: class {
     func playerDied(_: R2DPlayer)
 }
 
-public typealias R2DPlayer = protocol<R2DPlayerProperties, R2DPlayerComponent, R2DPlayerDeathDelegateContainer>
+public typealias R2DPlayer = R2DPlayerProperties & R2DPlayerComponent & R2DPlayerDeathDelegateContainer

@@ -8,11 +8,11 @@
 
 import SpriteKit
 
-public typealias R2DSpawnerFunc = (seed: Int, type: R2DSpawnerType) -> [R2DScrolling]
+public typealias R2DSpawnerFunc = (_ seed: Int, _ type: R2DSpawnerType) -> [R2DScrolling]
 
 public protocol R2DSpawnProperties: class {
-    var minimumSpawnTime: NSTimeInterval { get set }
-    var maximumSpawnTime: NSTimeInterval { get set }
+    var minimumSpawnTime: TimeInterval { get set }
+    var maximumSpawnTime: TimeInterval { get set }
     var spawnType: R2DSpawnerType { get set }
     
     var spawnNodes: R2DSpawnerFunc { get set }
@@ -23,7 +23,7 @@ public protocol R2DSpawnerComponent {
     func spawn() -> [R2DScrolling]
     func spawnAction()
     func startSpawning()
-    func updateSpawnNodes(currentTime: CFTimeInterval)
+    func updateSpawnNodes(_ currentTime: CFTimeInterval)
     func stopSpawning()
     func stop()
 }
@@ -31,7 +31,7 @@ public protocol R2DSpawnerComponent {
 public extension R2DSpawnerComponent where Self: R2DSpawnProperties {
     func spawn() -> [R2DScrolling] {
         self.seed += 1
-        return self.spawnNodes(seed: self.seed, type: self.spawnType)
+        return self.spawnNodes(self.seed, self.spawnType)
     }
 }
 
@@ -39,13 +39,13 @@ public extension R2DSpawnerComponent where Self: R2DSpawnProperties, Self: SKNod
     func startSpawning() {
         let min: UInt32 = UInt32(self.minimumSpawnTime + 1)
         let max: UInt32 = UInt32(self.maximumSpawnTime + 1)
-        let spawnTime = NSTimeInterval(arc4random_uniform(max) + min)
+        let spawnTime = TimeInterval(arc4random_uniform(max) + min)
         let range = self.maximumSpawnTime - self.minimumSpawnTime
-        let action = SKAction.repeatActionForever( SKAction.sequence([
-            SKAction.waitForDuration(spawnTime, withRange: spawnTime/range),
-            SKAction.runBlock(self.spawnAction)
+        let action = SKAction.repeatForever( SKAction.sequence([
+            SKAction.wait(forDuration: spawnTime, withRange: spawnTime/range),
+            SKAction.run(self.spawnAction)
             ] ) )
-        self.runAction(action)
+        self.run(action)
     }
     
     func stopSpawning() {
@@ -59,4 +59,4 @@ public extension R2DSpawnerComponent where Self: R2DSpawnProperties, Self: SKNod
     }
 }
 
-public typealias R2DSpawner = protocol<R2DSpawnProperties, R2DSpawnerComponent>
+public typealias R2DSpawner = R2DSpawnProperties & R2DSpawnerComponent

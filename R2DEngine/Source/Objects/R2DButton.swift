@@ -8,25 +8,24 @@
 
 import SpriteKit
 
-public class R2DButton: SKNode {
-    
-    public typealias R2DButtonCallback = R2DButton -> Void
+open class R2DButton: SKNode {
+    public typealias R2DButtonCallback = (R2DButton) -> Void
     
     var tapCallback: R2DButtonCallback? = nil
     
-    public var fontSize: CGFloat = 12.0 {
+    open var fontSize: CGFloat = 12.0 {
         didSet {
-            guard let label = self.childNodeWithName("button_label") as? SKLabelNode else { return }
-            label.fontSize = self.fontSize
+            guard let label = childNode(withName: "button_label") as? SKLabelNode else { return }
+            label.fontSize = fontSize
         }
     }
     
-    private var originalFontColor: SKColor? = nil
-    public var fontColor: SKColor = .whiteColor() {
+    fileprivate var originalFontColor: SKColor? = nil
+    open var fontColor: SKColor = .white {
         didSet {
-            if self.originalFontColor == nil { self.originalFontColor = self.fontColor }
-            guard let label = self.childNodeWithName("button_label") as? SKLabelNode else { return }
-            label.fontColor = self.fontColor
+            if self.originalFontColor == nil { originalFontColor = fontColor }
+            guard let label = childNode(withName: "button_label") as? SKLabelNode else { return }
+            label.fontColor = fontColor
         }
     }
     
@@ -53,34 +52,34 @@ public class R2DButton: SKNode {
     public convenience init(sprite: SKSpriteNode, label: SKLabelNode) {
         self.init()
         
-        sprite.position = CGPointZero
+        sprite.position = CGPoint.zero
         sprite.name = "button_sprite"
         
-        label.position = CGPointZero
+        label.position = CGPoint.zero
         label.name = "button_label"
         
-        self.addChild(sprite)
-        self.addChild(label)
+        addChild(sprite)
+        addChild(label)
         
-        self.userInteractionEnabled = true
+        isUserInteractionEnabled = true
     }
     
-    public func tapCallback(callback: R2DButtonCallback?) {
+    open func tapCallback(_ callback: R2DButtonCallback?) {
         self.tapCallback = callback
     }
     
     // MARK: - Touches
     
-    public override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         
-        self.fontColor = self.fontColor.r2d_lighterColor(0.25)
+        self.fontColor = fontColor.r2d_lighterColor(0.25)
     }
     
-    public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         
-        self.fontColor = self.originalFontColor ?? SKColor.clearColor()
+        self.fontColor = originalFontColor ?? SKColor.clear
         self.tapCallback?(self)
     }
 }

@@ -9,5 +9,5 @@
 import SpriteKit
 
 public protocol R2DGameComponent {
-    func updateCollision(contact: SKPhysicsContact, gameManager: R2DGameManagerComponent)
+    func updateCollision(with contact: SKPhysicsContact, andGameManager gameManager: R2DGameManagerComponent)
 }

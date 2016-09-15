@@ -14,34 +14,35 @@ public protocol R2DScrollingProperties {
 }
 
 public protocol R2DScrollingComponent {
-    func startScrolling()
-    func startScrollingForever()
-    func moveAction() -> SKAction
-    func moveForeverAction() -> SKAction
+    var scrollAction: SKAction { get }
+    var scrollForeverAction: SKAction { get }
+    
+    func scroll()
+    func scrollForever()
 }
 
 public extension R2DScrollingComponent where Self: R2DScrollingProperties {
     var scrollDelta: CGVector {
-        return self.scrollDirection.vector * self.scrollSpeed
+        return scrollDirection.vector * scrollSpeed
     }
     
-    func moveAction() -> SKAction {
-        return SKAction.moveBy(self.scrollDelta, duration: 1.0/60.0)
+    var scrollAction: SKAction {
+        return SKAction.move(by: scrollDelta, duration: 1.0/60.0)
     }
     
-    func moveForeverAction() -> SKAction {
-        return SKAction.repeatActionForever( self.moveAction() )
+    var scrollForeverAction: SKAction {
+        return SKAction.repeatForever( scrollAction )
     }
 }
 
 public extension R2DScrollingComponent where Self: SKNode {
     func startScrollingForever() {
-        self.runAction(self.moveForeverAction())
+        run( scrollAction )
     }
     
     func startScrolling() {
-        self.runAction(self.moveAction())
+        run( scrollForeverAction )
     }
 }
 
-public typealias R2DScrolling = protocol<R2DScrollingProperties, R2DScrollingComponent>
+public typealias R2DScrolling = R2DScrollingProperties & R2DScrollingComponent

@@ -11,37 +11,37 @@ import Foundation
 /// Enum - Used to define a direction i.e. Left, Right, Up, Down
 public enum R2DDirection {
     /// CGVector - (dx: -1.0, dy: 0.0)
-    case Left
+    case left
     /// CGVector - (dx: 1.0, dy: 0.0)
-    case Right
+    case right
     /// CGVector - (dx: 0.0, dy: 1.0)
-    case Up
+    case up
     /// CGVector - (dx: 0.0, dy: -1.0)
-    case Down
+    case down
     
     /// Get R2DDirection enum value as a CGVector
     public var vector: CGVector {
         switch self {
-        case .Left: return CGVector(dx: -1.0, dy: 0.0)
-        case .Right: return CGVector(dx: 1.0, dy: 0.0)
-        case .Up: return CGVector(dx: 0.0, dy: 1.0)
-        case .Down: return CGVector(dx: 0.0, dy: -1.0)
+        case .left: return CGVector(dx: -1.0, dy: 0.0)
+        case .right: return CGVector(dx: 1.0, dy: 0.0)
+        case .up: return CGVector(dx: 0.0, dy: 1.0)
+        case .down: return CGVector(dx: 0.0, dy: -1.0)
         }
     }
     
     /// Returns a random (Left or Right) R2DDirection
     public static var randomHorizontal: R2DDirection {
         if arc4random_uniform(2) == 0 {
-            return .Left
+            return .left
         }
-        return .Right
+        return .right
     }
     
     /// Returns a random (Up or Down) R2DDirection
     public static var randomVertical: R2DDirection {
         if arc4random_uniform(2) == 0 {
-            return .Up
+            return .up
         }
-        return .Down
+        return .down
     }
 }

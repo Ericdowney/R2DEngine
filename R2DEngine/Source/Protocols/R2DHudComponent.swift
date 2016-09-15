@@ -16,17 +16,17 @@ public protocol R2DHudComponentProperties {
 public protocol R2DHudComponent {
     mutating func hide()
     mutating func show()
-    func initialize<T: SKScene where T: R2DGameManager>(gameManager: T)
+    func initialize<T: SKScene>(_ gameManager: T) where T: R2DGameManager
 }
 
 extension R2DHudComponent where Self: R2DHudComponentProperties {
     mutating public func hide() {
-        self.hidden = true
+        hidden = true
     }
     
     mutating public func show() {
-        self.hidden = false
+        hidden = false
     }
 }
 
-public typealias R2DHud = protocol<R2DHudComponentProperties, R2DHudComponent>
+public typealias R2DHud = R2DHudComponentProperties & R2DHudComponent

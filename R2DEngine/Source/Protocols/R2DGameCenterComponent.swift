@@ -9,52 +9,56 @@
 import GameKit
 
 public protocol R2DGameCenterProperties: class {
-    var r2d_gameCenterEnabled: Bool { get set }
-    var r2d_gameCenterDefaultLeaderBoard: String? { get set }
+    var gameCenterEnabled: Bool { get set }
+    var gameCenterDefaultLeaderBoard: String? { get set }
 }
 
 public protocol R2DGameCenterComponent: GKGameCenterControllerDelegate {
-    func authenticateLocalPlayer(viewController: UIViewController)
-    func displayLeaderboard(viewController: UIViewController)
+    func authenticateLocalPlayer(_ viewController: UIViewController)
+    func displayLeaderboard(_ viewController: UIViewController)
 }
 
 public extension R2DGameCenterComponent where Self: R2DGameCenterProperties {
-    func authenticateLocalPlayer(viewController: UIViewController) {
+    func authenticateLocalPlayer(_ viewController: UIViewController) {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
         
-        localPlayer.authenticateHandler = { viewCtrl, err in
+        func defaultLeaderboardHandler(with identifier: String?, andError error: Error?) {
+            if error == nil {
+                gameCenterDefaultLeaderBoard = identifier
+            }
+        }
+        
+        func handler(with viewCtrl: UIViewController?, andError err: Error?) {
             guard let controller = viewCtrl else {
-                self.r2d_gameCenterEnabled = false
+                gameCenterEnabled = false
                 print(err)
                 return
             }
-            viewController.presentViewController(controller, animated: true, completion: nil)
-            guard localPlayer.authenticated else {
-                self.r2d_gameCenterEnabled = false
+            viewController.present(controller, animated: true, completion: nil)
+            guard localPlayer.isAuthenticated else {
+                gameCenterEnabled = false
                 print("Local player could not be authenticated, disabling game center")
                 print(err)
                 return
             }
             // 2 Player is already euthenticated & logged in, load game center
-            self.r2d_gameCenterEnabled = true
+            gameCenterEnabled = true
             
             // Get the default leaderboard ID
-            localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler { leaderboardIdentifer, error in
-                if error == nil {
-                    self.r2d_gameCenterDefaultLeaderBoard = leaderboardIdentifer
-                }
-            }
+            localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: defaultLeaderboardHandler)
         }
+        
+        localPlayer.authenticateHandler = handler
     }
     
-    func displayLeaderboard(viewController: UIViewController) {
+    func displayLeaderboard(_ viewController: UIViewController) {
         let gcViewCtrl = GKGameCenterViewController()
         
-        gcViewCtrl.viewState = .Leaderboards
-        gcViewCtrl.leaderboardIdentifier = self.r2d_gameCenterDefaultLeaderBoard
+        gcViewCtrl.viewState = .leaderboards
+        gcViewCtrl.leaderboardIdentifier = gameCenterDefaultLeaderBoard
         
-        viewController.presentViewController(gcViewCtrl, animated: true, completion: nil)
+        viewController.present(gcViewCtrl, animated: true, completion: nil)
     }
 }
 
-public typealias R2DGameCenter = protocol<R2DGameCenterProperties, R2DGameCenterComponent>
+public typealias R2DGameCenter = R2DGameCenterProperties & R2DGameCenterComponent

@@ -9,9 +9,9 @@
 import SpriteKit
 
 public protocol R2DBlinkProperties {
-    var fadeDuration: NSTimeInterval { get set }
+    var fadeDuration: TimeInterval { get set }
     var numberOfBlinks: Int { get set }
-    var blinkEndAction: (Void -> Void)? { get set }
+    var blinkEndAction: ((Void) -> Void)? { get set }
 }
 
 public protocol R2DBlinkComponent {
@@ -24,20 +24,20 @@ public extension R2DBlinkComponent where Self: SKNode, Self: R2DBlinkProperties 
         self.numberOfBlinks.r2d_times {
             sequence.append(self.blinkAction())
         }
-        sequence.append(SKAction.runBlock { [unowned self] in
-            self.blinkEndAction?()
+        sequence.append(SKAction.run { [weak self] in
+            self?.blinkEndAction?()
         })
         
-        self.runAction(SKAction.sequence(sequence))
+        self.run(SKAction.sequence( sequence ))
     }
     
-    private func blinkAction() -> SKAction {
+    fileprivate func blinkAction() -> SKAction {
         return SKAction.sequence([
-            SKAction.fadeOutWithDuration(fadeDuration),
-            SKAction.waitForDuration(0.05),
-            SKAction.fadeInWithDuration(fadeDuration)
+            SKAction.fadeOut(withDuration: fadeDuration),
+            SKAction.wait(forDuration: 0.05),
+            SKAction.fadeIn(withDuration: fadeDuration)
         ])
     }
 }
 
-public typealias R2DBlink = protocol<R2DBlinkProperties, R2DBlinkComponent>
+public typealias R2DBlink = R2DBlinkProperties & R2DBlinkComponent

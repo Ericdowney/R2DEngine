@@ -13,55 +13,55 @@ public protocol R2DHudManagerProperties {
 }
 
 public protocol R2DHudManagerComponent {
-    mutating func registerComponent(component: R2DHud)
-    func initialize<T: SKScene where T: R2DGameManager>(gameManager: T) -> [R2DHud]
-    func showHud(name: String) -> R2DHud?
-    func hideHud(name: String) -> R2DHud?
-    func getHud(name: String) -> R2DHud?
-    func getAllHudsExcept(name: String) -> [R2DHud]
-    func switchToHud(name: String)
+    mutating func registerComponent(_ component: R2DHud)
+    func initialize<T: SKScene>(_ gameManager: T) -> [R2DHud] where T: R2DGameManager
+    func showHud(by name: String) -> R2DHud?
+    func hideHud(by name: String) -> R2DHud?
+    func getHud(by name: String) -> R2DHud?
+    func hudsExcept(_ name: String) -> [R2DHud]
+    func switchToHud(by name: String)
 }
 
 public extension R2DHudManagerComponent where Self: R2DHudManagerProperties {
-    mutating func registerComponent(component: R2DHud) {
-        self.hudComponents.append(component)
+    mutating func registerComponent(_ component: R2DHud) {
+        hudComponents.append(component)
     }
     
-    func initialize<T: SKScene where T: R2DGameManager>(gameManager: T) -> [R2DHud] {
-        self.hudComponents.forEach {
+    func initialize<T: SKScene>(_ gameManager: T) -> [R2DHud] where T: R2DGameManager {
+        hudComponents.forEach {
             $0.initialize(gameManager)
         }
-        return self.hudComponents
+        return hudComponents
     }
     
-    func showHud(name: String) -> R2DHud? {
-        var hud: R2DHud? = self.getHud(name)
+    func showHud(by name: String) -> R2DHud? {
+        var hud: R2DHud? = getHud(by: name)
         hud?.show()
         return hud
     }
     
-    func hideHud(name: String) -> R2DHud? {
-        var hud: R2DHud? = self.getHud(name)
+    func hideHud(by name: String) -> R2DHud? {
+        var hud: R2DHud? = getHud(by: name)
         hud?.hide()
         return hud
     }
     
-    func getHud(name: String) -> R2DHud? {
-        return self.hudComponents.filter { $0.hudName == name }.first
+    func getHud(by name: String) -> R2DHud? {
+        return hudComponents.first { $0.hudName == name }
     }
     
-    func getAllHudsExcept(name: String) -> [R2DHud] {
-        return self.hudComponents.filter { $0.hudName != name }
+    func hudsExcept(_ name: String) -> [R2DHud] {
+        return hudComponents.filter { $0.hudName != name }
     }
     
-    func switchToHud(name: String) {
-        for var i in self.hudComponents {
-            i.hide()
-            if i.hudName == name {
-                i.show()
+    func switchToHud(_ name: String) {
+        for var hud in hudComponents {
+            hud.hide()
+            if hud.hudName == name {
+                hud.show()
             }
         }
     }
 }
 
-public typealias R2DHudManager = protocol<R2DHudManagerProperties, R2DHudManagerComponent>
+public typealias R2DHudManager = R2DHudManagerProperties & R2DHudManagerComponent

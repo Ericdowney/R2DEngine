@@ -22,7 +22,7 @@ public protocol R2DAttackComponent {
      
      - Parameter direction: The direction to look for a prey (Left || Right) or (Up || Down)
      */
-    func startLookingForPrey(direction: R2DDirection)
+    func startLookingForPrey(_ direction: R2DDirection)
     
     /**
      The function that should be called once a prey is found
@@ -41,38 +41,38 @@ extension R2DAttackComponent where Self: R2DAttackProperties, Self: SKSpriteNode
      
      - The default implementation starts an SKAction sequence that looks for a specified prey with the given direction. The sequence waits 0.35 seconds with a random +/- of 0.25.
      */
-    public func startLookingForPrey(direction: R2DDirection) {
-        self.runAction( SKAction.repeatActionForever(SKAction.sequence([
-            SKAction.runBlock { [unowned self] in
-                self.lookForPrey(direction)
+    public func startLookingForPrey(_ direction: R2DDirection) {
+        self.run( SKAction.repeatForever(SKAction.sequence([
+            SKAction.run { [weak self] in
+                self?.lookForPrey(direction)
             },
-            SKAction.waitForDuration(0.35, withRange: 0.25)
+            SKAction.wait(forDuration: 0.35, withRange: 0.25)
         ])) )
     }
     
-    func lookForPrey(direction: R2DDirection) {
-        guard let aPrey = self.prey else { return }
-        if (direction == .Left || direction == .Right) && self.checkLeftRight(aPrey) {
-            self.foundPrey()
+    func lookForPrey(_ direction: R2DDirection) {
+        guard let aPrey = prey else { return }
+        if (direction == .left || direction == .right) && checkLeftRight(aPrey) {
+            foundPrey()
         }
         
-        if (direction == .Up || direction == .Down) && self.checkUpDown(aPrey) {
-            self.foundPrey()
+        if (direction == .up || direction == .down) && checkUpDown(aPrey) {
+            foundPrey()
         }
     }
     
-    private func checkLeftRight(prey: Prey) -> Bool {
+    fileprivate func checkLeftRight(_ prey: Prey) -> Bool {
         switch prey.position.x {
-            case self.r2d_leftX...self.r2d_rightX:
+            case r2d_leftX...r2d_rightX:
                 return true
             default:
                 return false
         }
     }
     
-    private func checkUpDown(prey: Prey) -> Bool {
+    fileprivate func checkUpDown(_ prey: Prey) -> Bool {
         switch prey.position.y {
-        case self.r2d_bottomY...self.r2d_topY:
+        case r2d_bottomY...r2d_topY:
             return true
         default:
             return false
@@ -90,4 +90,4 @@ extension R2DAttackComponent where Self: R2DAttackProperties, Self: SKSpriteNode
     }
 }
 
-public typealias R2DAttack = protocol<R2DAttackProperties, R2DAttackComponent>
+public typealias R2DAttack = R2DAttackProperties & R2DAttackComponent

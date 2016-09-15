@@ -24,16 +24,20 @@ public extension R2DDashComponent where Self: R2DDashProperties, Self: SKSpriteN
     }
     
     func dash() {
-        self.runAction( SKAction.sequence([
-            SKAction.runBlock { [unowned self] in
+        self.run( dashSequence() )
+    }
+    
+    fileprivate func dashSequence() -> SKAction {
+        return SKAction.sequence([
+            SKAction.run { [unowned self] in
                 self.position += self.dashDelta
             },
-            SKAction.waitForDuration(1.0),
-            SKAction.runBlock { [unowned self] in
-                self.onDash()
+            SKAction.wait(forDuration: 1.0),
+            SKAction.run { [weak self] in
+                self?.onDash()
             }
-        ]) )
+        ])
     }
 }
 
-public typealias R2DDash = protocol<R2DDashProperties, R2DDashComponent>
+public typealias R2DDash = R2DDashProperties & R2DDashComponent

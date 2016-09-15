@@ -11,6 +11,6 @@ import SpriteKit
 extension SKPhysicsBody {
     convenience init?(r2dRectangleOfSize: CGSize?) {
         guard let size = r2dRectangleOfSize else { return nil }
-        self.init(rectangleOfSize: size)
+        self.init(rectangleOf: size)
     }
 }

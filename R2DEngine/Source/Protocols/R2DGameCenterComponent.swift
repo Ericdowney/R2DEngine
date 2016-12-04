@@ -31,14 +31,14 @@ public extension R2DGameCenterComponent where Self: R2DGameCenterProperties {
         func handler(with viewCtrl: UIViewController?, andError err: Error?) {
             guard let controller = viewCtrl else {
                 gameCenterEnabled = false
-                print(err)
+                print(err as Any)
                 return
             }
             viewController.present(controller, animated: true, completion: nil)
             guard localPlayer.isAuthenticated else {
                 gameCenterEnabled = false
                 print("Local player could not be authenticated, disabling game center")
-                print(err)
+                print(err as Any)
                 return
             }
             // 2 Player is already euthenticated & logged in, load game center

@@ -11,22 +11,20 @@ import SpriteKit
 public protocol R2DBlinkProperties {
     var fadeDuration: TimeInterval { get set }
     var numberOfBlinks: Int { get set }
-    var blinkEndAction: ((Void) -> Void)? { get set }
 }
 
 public protocol R2DBlinkComponent {
     func blink()
+    func blinkEnd() -> SKAction
 }
 
 public extension R2DBlinkComponent where Self: SKNode, Self: R2DBlinkProperties {
     func blink() {
         var sequence: [SKAction] = []
-        self.numberOfBlinks.r2d_times {
+        self.numberOfBlinks.times {
             sequence.append(self.blinkAction())
         }
-        sequence.append(SKAction.run { [weak self] in
-            self?.blinkEndAction?()
-        })
+        sequence.append(blinkEnd())
         
         self.run(SKAction.sequence( sequence ))
     }

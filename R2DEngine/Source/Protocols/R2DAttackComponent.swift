@@ -63,7 +63,7 @@ extension R2DAttackComponent where Self: R2DAttackProperties, Self: SKSpriteNode
     
     fileprivate func checkLeftRight(_ prey: Prey) -> Bool {
         switch prey.position.x {
-            case r2d_leftX...r2d_rightX:
+            case leftX...rightX:
                 return true
             default:
                 return false
@@ -72,7 +72,7 @@ extension R2DAttackComponent where Self: R2DAttackProperties, Self: SKSpriteNode
     
     fileprivate func checkUpDown(_ prey: Prey) -> Bool {
         switch prey.position.y {
-        case r2d_bottomY...r2d_topY:
+        case bottomY...topY:
             return true
         default:
             return false

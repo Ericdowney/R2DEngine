@@ -23,12 +23,12 @@ extension SKNode {
     }
     
     /// Getter/Setter - Tuple representation of position between 0 - 1.
-    public var r2dPositionPercent: (x: CGFloat, y: CGFloat) {
+    public var positionPercent: (x: CGFloat, y: CGFloat) {
         get {
             return ( position.x / R2DUtils.screenWidth, position.y / R2DUtils.screenHeight )
         }
         set {
-            position = R2DUtils.getX(newValue.x, y: newValue.y)
+            position = R2DUtils.get(X: newValue.x, Y: newValue.y)
         }
     }
     
@@ -39,9 +39,9 @@ extension SKNode {
      
      - Parameter r2d_name: The name of the node
      */
-    public convenience init(r2d_name: String) {
+    public convenience init(name: String) {
         self.init()
-        name = r2d_name
+        self.name = name
     }
     
     // MARK: - Add Children
@@ -53,9 +53,8 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_addChildren(_ nodes: SKNode...) -> Self {
-        nodes.forEach { addChild($0) }
-        return self
+    public func add(children nodes: SKNode...) -> Self {
+        return add(children: nodes)
     }
     
     /**
@@ -65,7 +64,7 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_addChildren(_ nodes: [SKNode]) -> Self {
+    public func add(children nodes: [SKNode]) -> Self {
         nodes.forEach { addChild($0) }
         return self
     }
@@ -79,7 +78,7 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_eachChild(_ loop: (SKNode) -> Void) -> Self {
+    public func eachChild(_ loop: (SKNode) -> Void) -> Self {
         children.forEach(loop)
         return self
     }
@@ -92,7 +91,7 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_eachChildWithName(_ name: String, loop: (SKNode) -> Void) -> Self {
+    public func eachChildBy(name: String, _ loop: (SKNode) -> Void) -> Self {
         children.filter { $0.name == name }.forEach(loop)
         return self
     }
@@ -105,7 +104,7 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_eachChildContainsName(_ name: String, loop: (SKNode) -> Void) -> Self {
+    public func eachChildContaining(name: String, _ loop: (SKNode) -> Void) -> Self {
         children.filter { $0.name?.contains(name) ?? false }.forEach(loop)
         return self
     }
@@ -119,7 +118,7 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_position(_ position: CGPoint) -> Self {
+    public func set(position: CGPoint) -> Self {
         self.position = position
         return self
     }
@@ -132,7 +131,7 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_position(_ x: CGFloat, y: CGFloat) -> Self {
+    public func setPosition(byX x: CGFloat, Y y: CGFloat) -> Self {
         position = CGPoint(x: x, y: y)
         return self
     }
@@ -145,8 +144,8 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_positionPercent(_ x: CGFloat, y: CGFloat) -> Self {
-        position = R2DUtils.getX(x, y: y)
+    public func setPosition(byXPercent x: CGFloat, YPercent y: CGFloat) -> Self {
+        position = R2DUtils.get(X: x, Y: y)
         return self
     }
     
@@ -157,7 +156,7 @@ extension SKNode {
      
      - Returns: Self
      */
-    public func r2d_addToNode(_ node: SKNode) -> Self {
+    public func addTo(node: SKNode) -> Self {
         node.addChild(self)
         return self
     }

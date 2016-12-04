@@ -27,17 +27,17 @@ public struct R2DUtils {
     }
     
     /// Get CGPoint based on percentage of screen x: 0 - 1.0, y: 0 - 1.0
-    public static func getX(_ x: CGFloat, y: CGFloat) -> CGPoint {
+    public static func get(X x: CGFloat, Y y: CGFloat) -> CGPoint {
         return CGPoint(x: R2DUtils.screenSize.width * x, y: R2DUtils.screenSize.height * y)
     }
     
     /// Get CGFloat based on percentage of screen x: 0 - 1.0
-    public static func getX(_ x: CGFloat) -> CGFloat {
+    public static func get(X x: CGFloat) -> CGFloat {
         return R2DUtils.screenWidth * x
     }
     
     /// Get CGFloat based on percentage of screen y: 0 - 1.0
-    public static func getY(_ y: CGFloat) -> CGFloat {
+    public static func get(Y y: CGFloat) -> CGFloat {
         return R2DUtils.screenHeight * y
     }
 }

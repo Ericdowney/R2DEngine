@@ -12,7 +12,7 @@ public extension SKSpriteNode {
     
     // MARK: - Properties
     
-    public var r2dAnchor: R2DAnchorPoint {
+    public var anchor: R2DAnchorPoint {
         get {
             return R2DAnchorPoint.fromCGPoint(anchorPoint)
         }
@@ -23,60 +23,60 @@ public extension SKSpriteNode {
     
     // MARK: X
     
-    public var r2d_leftX: CGFloat {
+    public var leftX: CGFloat {
         return position.x - (size.width * anchorPoint.x)
     }
     
-    public var r2d_rightX: CGFloat {
+    public var rightX: CGFloat {
         return position.x + size.width - (size.width * anchorPoint.x)
     }
     
     // MARK: Y
     
-    public var r2d_topY: CGFloat {
+    public var topY: CGFloat {
         return position.y + size.height - (size.height * anchorPoint.y)
     }
     
-    public var r2d_bottomY: CGFloat {
+    public var bottomY: CGFloat {
         return position.y - (size.height * anchorPoint.y)
     }
     
     // MARK: - Setters
     
-    public func r2d_color(_ color: SKColor) -> Self {
+    public func set(color: SKColor) -> Self {
         self.color = color
         return self
     }
     
-    public func r2d_anchor(_ anchor: R2DAnchorPoint) -> Self {
+    public func set(anchor: R2DAnchorPoint) -> Self {
         anchorPoint = anchor.value
         return self
     }
     
-    public func r2d_texture(_ texture: SKTexture) -> Self {
+    public func set(texture: SKTexture) -> Self {
         self.texture = texture
         return self
     }
     
-    public func r2d_imageNamed(_ imageNamed: String) -> Self {
+    public func set(imageNamed: String) -> Self {
         texture = SKTexture(imageNamed: imageNamed)
         return self
     }
     
     // MARK: - Physics
     
-    func r2d_physicsBody(_ body: SKPhysicsBody) -> Self {
-        physicsBody = body
+    func set(physicsBody: SKPhysicsBody) -> Self {
+        self.physicsBody = physicsBody
         return self
     }
     
-    func r2d_physicsBodyFromSize(_ size: CGSize) -> Self {
+    func set(physicsBodyFromSize size: CGSize) -> Self {
         physicsBody = SKPhysicsBody(rectangleOf: size)
         return self
     }
 
-    func r2d_physicsBodyFromTexture() -> Self {
-        physicsBody = SKPhysicsBody(r2dRectangleOfSize: texture?.size())
+    func setPhysicsBodyFromTexture() -> Self {
+        physicsBody = SKPhysicsBody(rectangleOfSize: texture?.size())
         return self
     }
 }

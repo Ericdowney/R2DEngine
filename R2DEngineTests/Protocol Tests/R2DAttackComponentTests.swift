@@ -54,8 +54,8 @@ class R2DAttackComponentTests: QuickSpec {
                     var prey: SKSpriteNode!
                     
                     beforeEach {
-                        subject = EnemyWithFoundPrey(color: .blue(), size: CGSize(width: 10, height: 1))
-                        prey = SKSpriteNode(color: .red(), size: CGSize(width: 10, height: 1))
+                        subject = EnemyWithFoundPrey(color: .blue, size: CGSize(width: 10, height: 1))
+                        prey = SKSpriteNode(color: .red, size: CGSize(width: 10, height: 1))
                         subject.prey = prey
                         subject.position = CGPoint(x: 10, y: 0)
                         prey.position = CGPoint(x: 15, y: 0)
@@ -94,8 +94,8 @@ class R2DAttackComponentTests: QuickSpec {
                     var prey: SKSpriteNode!
                     
                     beforeEach {
-                        subject = EnemyWithFoundPrey(color: .blue(), size: CGSize(width: 1, height: 10))
-                        prey = SKSpriteNode(color: .red(), size: CGSize(width: 1, height: 10))
+                        subject = EnemyWithFoundPrey(color: .blue, size: CGSize(width: 1, height: 10))
+                        prey = SKSpriteNode(color: .red, size: CGSize(width: 1, height: 10))
                         subject.prey = prey
                         subject.position = CGPoint(x: 0, y: 10)
                         prey.position = CGPoint(x: 0, y: 14)

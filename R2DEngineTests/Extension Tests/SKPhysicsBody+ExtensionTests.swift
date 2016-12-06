@@ -20,7 +20,7 @@ class SKPhysicsBody_ExtensionTests: QuickSpec {
             it("should fail initialization when passed an invalid CGSize") {
                 let badSize: CGSize? = nil
                 
-                let result: SKPhysicsBody? = SKPhysicsBody(r2dRectangleOfSize: badSize)
+                let result: SKPhysicsBody? = SKPhysicsBody(rectangleOfSize: badSize)
                 
                 expect(result).to(beNil())
             }
@@ -28,7 +28,7 @@ class SKPhysicsBody_ExtensionTests: QuickSpec {
             it("should succeed initialization when passed a valid CGSize") {
                 let goodSize: CGSize? = CGSize(width: 10, height: 20)
                 
-                let result: SKPhysicsBody? = SKPhysicsBody(r2dRectangleOfSize: goodSize)
+                let result: SKPhysicsBody? = SKPhysicsBody(rectangleOfSize: goodSize)
                 
                 expect(result).toNot(beNil())
             }

@@ -18,7 +18,7 @@ class SKNodeExtensionTests: QuickSpec {
         describe("SKNode") {
             describe("Initializer") {
                 it("should construct an SKNode with a name") {
-                    let subject = SKNode(r2d_name: "aNode")
+                    let subject = SKNode(name: "aNode")
                     
                     expect(subject.name).to(contain("aNode"))
                 }
@@ -57,19 +57,19 @@ class SKNodeExtensionTests: QuickSpec {
                 }
                 
                 it("should add multiple nodes as children from variadic params") {
-                    let c1 = SKNode(r2d_name: "node1")
-                    let c2 = SKNode(r2d_name: "node2")
+                    let c1 = SKNode(name: "node1")
+                    let c2 = SKNode(name: "node2")
                     
-                    subject.r2d_addChildren(c1, c2)
+                    subject.add(children: c1, c2)
                     
                     expect(subject.children).to(contain(c1, c2))
                 }
                 
                 it("should add multiple nodes as children from an array of params") {
-                    let c1 = SKNode(r2d_name: "node1")
-                    let c2 = SKNode(r2d_name: "node2")
+                    let c1 = SKNode(name: "node1")
+                    let c2 = SKNode(name: "node2")
                     
-                    subject.r2d_addChildren([c1, c2])
+                    subject.add(children: [c1, c2])
                     
                     expect(subject.children).to(contain(c1, c2))
                 }
@@ -77,7 +77,7 @@ class SKNodeExtensionTests: QuickSpec {
                 it("should add the current node to another node") {
                     let other = SKNode()
                     
-                    subject.r2d_addToNode(other)
+                    subject.addTo(node: other)
                     
                     expect(other.children).to(contain(subject))
                 }
@@ -97,7 +97,7 @@ class SKNodeExtensionTests: QuickSpec {
                     subject.addChild(c2)
                     var times = 0
                     
-                    subject.r2d_eachChild { _ in
+                    subject.eachChild { _ in
                         times += 1
                     }
                     
@@ -113,7 +113,7 @@ class SKNodeExtensionTests: QuickSpec {
                     subject.addChild(c2)
                     var times = 0
                     
-                    subject.r2d_eachChildWithName("1") { _ in
+                    subject.eachChildBy(name: "1") { _ in
                         times += 1
                     }
                     
@@ -131,7 +131,7 @@ class SKNodeExtensionTests: QuickSpec {
                     subject.addChild(c3)
                     var times = 0
                     
-                    subject.r2d_eachChildContainsName("1") { _ in
+                    subject.eachChildContaining(name: "1") { _ in
                         times += 1
                     }
                     
@@ -149,7 +149,7 @@ class SKNodeExtensionTests: QuickSpec {
                 it("should set the position from a CGPoint") {
                     let p1 = CGPoint(x: 15, y: 20)
                     
-                    subject.r2d_position(p1)
+                    subject.set(position: p1)
                     
                     expect(subject.position).to(equal(p1))
                 }
@@ -157,7 +157,7 @@ class SKNodeExtensionTests: QuickSpec {
                 it("should set the position from x and y") {
                     let p1 = CGPoint(x: 15, y: 20)
                     
-                    subject.r2d_position(p1.x, y: p1.y)
+                    subject.setPosition(byX: p1.x, Y: p1.y)
                     
                     expect(subject.position).to(equal(p1))
                 }

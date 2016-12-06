@@ -35,8 +35,8 @@ class R2DScrollingComponentTests: QuickSpec {
                     expect(result).to(equal(CGVector(dx: -2.0, dy: 0.0)))
                 }
                 
-                it("should return a move action") {
-                    let result = subject.moveAction()
+                it("should return a scroll action") {
+                    let result = subject.scrollAction
                     
                     expect(result.duration).to(beCloseTo(1.0/60.0))
                 }

@@ -53,6 +53,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func add(children nodes: SKNode...) -> Self {
         return add(children: nodes)
     }
@@ -64,6 +65,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func add(children nodes: [SKNode]) -> Self {
         nodes.forEach { addChild($0) }
         return self
@@ -78,6 +80,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func eachChild(_ loop: (SKNode) -> Void) -> Self {
         children.forEach(loop)
         return self
@@ -91,6 +94,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func eachChildBy(name: String, _ loop: (SKNode) -> Void) -> Self {
         children.filter { $0.name == name }.forEach(loop)
         return self
@@ -104,6 +108,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func eachChildContaining(name: String, _ loop: (SKNode) -> Void) -> Self {
         children.filter { $0.name?.contains(name) ?? false }.forEach(loop)
         return self
@@ -118,6 +123,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func set(position: CGPoint) -> Self {
         self.position = position
         return self
@@ -131,6 +137,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func setPosition(byX x: CGFloat, Y y: CGFloat) -> Self {
         position = CGPoint(x: x, y: y)
         return self
@@ -144,6 +151,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func setPosition(byXPercent x: CGFloat, YPercent y: CGFloat) -> Self {
         position = R2DUtils.get(X: x, Y: y)
         return self
@@ -156,6 +164,7 @@ extension SKNode {
      
      - Returns: Self
      */
+    @discardableResult
     public func addTo(node: SKNode) -> Self {
         node.addChild(self)
         return self

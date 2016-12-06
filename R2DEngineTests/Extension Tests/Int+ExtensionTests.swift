@@ -19,7 +19,7 @@ class Int_ExtensionTests: QuickSpec {
                 let subject = 4
                 var sum = 0
                 
-                subject.r2d_times {
+                subject.times {
                     sum += 1
                 }
                 

@@ -43,21 +43,25 @@ public extension SKSpriteNode {
     
     // MARK: - Setters
     
+    @discardableResult
     public func set(color: SKColor) -> Self {
         self.color = color
         return self
     }
     
+    @discardableResult
     public func set(anchor: R2DAnchorPoint) -> Self {
         anchorPoint = anchor.value
         return self
     }
     
+    @discardableResult
     public func set(texture: SKTexture) -> Self {
         self.texture = texture
         return self
     }
     
+    @discardableResult
     public func set(imageNamed: String) -> Self {
         texture = SKTexture(imageNamed: imageNamed)
         return self
@@ -65,16 +69,19 @@ public extension SKSpriteNode {
     
     // MARK: - Physics
     
+    @discardableResult
     func set(physicsBody: SKPhysicsBody) -> Self {
         self.physicsBody = physicsBody
         return self
     }
     
+    @discardableResult
     func set(physicsBodyFromSize size: CGSize) -> Self {
         physicsBody = SKPhysicsBody(rectangleOf: size)
         return self
     }
 
+    @discardableResult
     func setPhysicsBodyFromTexture() -> Self {
         physicsBody = SKPhysicsBody(rectangleOfSize: texture?.size())
         return self

@@ -36,11 +36,11 @@ public extension R2DScrollingComponent where Self: R2DScrollingProperties {
 }
 
 public extension R2DScrollingComponent where Self: SKNode {
-    func startScrollingForever() {
+    func scroll() {
         run( scrollAction )
     }
     
-    func startScrolling() {
+    func scrollForever() {
         run( scrollForeverAction )
     }
 }

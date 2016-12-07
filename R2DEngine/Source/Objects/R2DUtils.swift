@@ -8,36 +8,48 @@
 
 import SpriteKit
 
-/// A Collection of static functions to help interact with the UIScreen.mainScreen() and Coordinate System
+public protocol ScreenMember {
+    var size: CGSize { get }
+}
+
+extension UIScreen: ScreenMember {
+    public var size: CGSize {
+        return UIScreen.main.bounds.size
+    }
+}
+
+/// A Collection of static functions to help interact with the UIScreen.main and Coordinate System
 public struct R2DUtils {
+    
+    static var screen: ScreenMember = UIScreen.main
     
     /// UIScreen - Main Screen - Size
     public static var screenSize: CGSize {
-        return UIScreen.main.bounds.size
+        return screen.size
     }
     
     /// UIScreen - Main Screen - Width
     public static var screenWidth: CGFloat {
-        return UIScreen.main.bounds.size.width
+        return screen.size.width
     }
     
     /// UIScreen - Main Screen - Height
     public static var screenHeight: CGFloat {
-        return UIScreen.main.bounds.size.height
+        return screen.size.height
     }
     
     /// Get CGPoint based on percentage of screen x: 0 - 1.0, y: 0 - 1.0
     public static func get(X x: CGFloat, Y y: CGFloat) -> CGPoint {
-        return CGPoint(x: R2DUtils.screenSize.width * x, y: R2DUtils.screenSize.height * y)
+        return CGPoint(x: screenSize.width * x, y: screenSize.height * y)
     }
     
     /// Get CGFloat based on percentage of screen x: 0 - 1.0
     public static func get(X x: CGFloat) -> CGFloat {
-        return R2DUtils.screenWidth * x
+        return screenWidth * x
     }
     
     /// Get CGFloat based on percentage of screen y: 0 - 1.0
     public static func get(Y y: CGFloat) -> CGFloat {
-        return R2DUtils.screenHeight * y
+        return screenHeight * y
     }
 }
